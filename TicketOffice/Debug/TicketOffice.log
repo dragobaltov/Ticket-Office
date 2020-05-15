@@ -1,0 +1,6 @@
+﻿  Event.cpp
+  Start.cpp
+  Ticket.cpp
+  Generating Code...
+C:\Users\USER\source\repos\Start\TicketOffice\Event.h(5,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  TicketOffice.vcxproj -> C:\Users\USER\source\repos\Start\Debug\Start.exe
