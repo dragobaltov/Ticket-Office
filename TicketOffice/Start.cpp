@@ -1,11 +1,8 @@
-#include <iostream>
-#include "Ticket.h"
+#include "TicketOfficeEngine.h"
 
 int main()
-{
-	Date d = { "2020-05-12" };
-	
-
-
+{	
+	TicketOfficeEngine engine{};
+	engine.run();
 }
 

@@ -18,9 +18,12 @@ Date::Date(const std::string& text_date)
 	std::vector<std::string> tokens;
 	split(text_date, tokens, '-');
 
-	set_year(num_parse(tokens[0]));
-	set_month(num_parse(tokens[1]));
-	set_day(num_parse(tokens[2]));
+	if (tokens.size() == 3)
+	{
+		set_year(num_parse(tokens[0]));
+		set_month(num_parse(tokens[1]));
+		set_day(num_parse(tokens[2]));
+	}
 }
 
 Date::Date(const Date& other)

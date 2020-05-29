@@ -4,26 +4,21 @@
 
 Ticket::Ticket() = default;
 
-Ticket::Ticket(const std::string& event_name, const Date& date, size_t row, size_t seat, const std::string& note)
+Ticket::Ticket(size_t row, size_t seat)
 {
-	set_event_name(event_name);
-	m_date = date;
 	m_row = row;
 	m_seat = seat;
-	m_note = note;
 }
 
-Ticket::Ticket(const Ticket& other) : m_event_name{ other.m_event_name }, m_date{ other.m_date }, m_row{other.m_row},
-m_seat{ other.m_seat }, m_note{ other.m_note }, m_code{ other.m_code }, m_status{other.m_status} {}
+Ticket::Ticket(const Ticket & other) : m_row{ other.m_row }, m_seat{ other.m_seat }, m_note{ other.m_note },
+m_code{ other.m_code }, m_status{ other.m_status } {}
 
 Ticket::~Ticket() = default;
 
-Ticket& Ticket::operator=(const Ticket& other)
+Ticket& Ticket::operator=(const Ticket & other)
 {
 	if (this != &other)
 	{
-		m_event_name = other.m_event_name;
-		m_date = other.m_date;
 		m_row = other.m_row;
 		m_seat = other.m_seat;
 		m_note = other.m_note;
@@ -34,30 +29,19 @@ Ticket& Ticket::operator=(const Ticket& other)
 	return *this;
 }
 
-void Ticket::set_event_name(const std::string& event_name)
-{
-	assert(event_name.length());
-	m_event_name = event_name;
-}
-
-void Ticket::set_code(const std::string& code)
+void Ticket::set_code(const Code & code)
 {
 	m_code = code;
+}
+
+void Ticket::set_note(const std::string & note)
+{
+	m_note = note;
 }
 
 void Ticket::set_status(TicketStatus status)
 {
 	m_status = status;
-}
-
-const std::string& Ticket::get_event_name() const
-{
-	return m_event_name;
-}
-
-const Date& Ticket::get_date() const
-{
-	return m_date;
 }
 
 size_t Ticket::get_row() const
@@ -75,7 +59,7 @@ const std::string& Ticket::get_note() const
 	return m_note;
 }
 
-const std::string& Ticket::get_code() const
+const Code& Ticket::get_code() const
 {
 	return m_code;
 }
@@ -85,16 +69,29 @@ TicketStatus Ticket::get_status() const
 	return m_status;
 }
 
-std::ostream& operator<<(std::ostream& out, const Ticket& ticket)
+bool Ticket::operator==(const Ticket & other) const
 {
-	out << "Event name: " << ticket.m_event_name << '\n' << "Date: " << ticket.m_date << '\n'
-		<< "Row: " << ticket.m_row << '\n' << "Seat: " << ticket.m_seat << '\n'<< "Code: " << ticket.m_code 
-		<< '\n' << "Status: " << ticket.m_status << '\n' << "Note: " << ticket.m_note << '\n';
+	return m_row == other.m_row && m_seat == other.m_seat;
+}
 
+std::ostream& operator<<(std::ostream & out, const Ticket & ticket)
+{
+	out << ROW_PREFIX << ticket.m_row << ", " << SEAT_PREFIX << ticket.m_seat;
+
+	if (ticket.m_status == TicketStatus::sold)
+	{
+		out << ", " << CODE_PREFIX << ticket.m_code;
+	}
+	else if (ticket.m_status == TicketStatus::booked)
+	{
+		out << ", " << NOTE_PREFIX << ticket.m_note;
+	}
+
+	out << '\n';
 	return out;
 }
 
-std::ostream& operator<<(std::ostream& out, TicketStatus status)
+std::ostream& operator<<(std::ostream & out, TicketStatus status)
 {
 	switch (status)
 	{
