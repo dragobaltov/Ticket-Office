@@ -27,6 +27,7 @@ public:
 	const Date& get_date() const;
 	size_t get_hall_num() const;
 	size_t get_sold_tickets_count() const;
+	double attendance_percentage() const;
 
 	bool book_ticket(size_t, size_t, const std::string&);
 	bool unbook_ticket(size_t, size_t);

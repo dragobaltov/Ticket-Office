@@ -117,6 +117,10 @@ void TicketOfficeEngine::execute_command(const std::string & command, const std:
 		{
 			print_best();
 		}
+		else if (command == "worst")
+		{
+			print_worst(additional);
+		}
 	}
 }
 
@@ -348,6 +352,30 @@ void TicketOfficeEngine::report(const std::string& input) const
 void TicketOfficeEngine::print_best()
 {
 	m_office.print_most_watched_events();
+}
+
+void TicketOfficeEngine::print_worst(const std::string& input)
+{
+	std::vector<std::string> tokens{};
+	split(input, tokens, ' ');
+
+	if (tokens.size() != 2)
+	{
+		std::cout << WRONG_INPUT_MSG;
+	}
+	else
+	{
+		if (!std::regex_match(tokens[0], DATE_FORMAT) || !std::regex_match(tokens[1], DATE_FORMAT))
+		{
+			std::cout << "Invalid date!\n";
+			return;
+		}
+
+		Date from{ tokens[0] };
+		Date to{ tokens[1] };
+
+		m_office.worst_events(from, to);
+	}
 }
 
 std::string get_name(const std::vector<std::string> & tokens, size_t start)

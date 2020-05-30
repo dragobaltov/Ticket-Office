@@ -191,6 +191,65 @@ void TicketOffice::print_most_watched_events()
 	}
 }
 
+void TicketOffice::worst_events(const Date& from, const Date& to)
+{
+	std::vector<size_t> worst_events_indexes{};
+	get_worst_events_indexes(worst_events_indexes, from, to);
+
+	std::cout << "Events with under 10% of attendance:\n";
+
+	for (size_t index : worst_events_indexes)
+	{
+		std::cout << m_events[index];
+	}
+
+	std::string question = "Would you like to remove these events?(Y/N) ";	
+	char answer = get_answer(question);
+
+	if (answer == 'Y' || answer == 'y')
+	{
+		size_t indent = 0;
+
+		for (size_t index : worst_events_indexes)
+		{
+			m_events.erase(m_events.begin() + index - indent);
+			++indent;
+		}
+
+		std::cout << "Successful removal!\n";
+	}
+}
+
+char TicketOffice::get_answer(const std::string& question) const
+{
+	char answer;
+	std::cout << question;
+	std::cin >> answer;
+
+	while (answer != 'Y' && answer != 'N' && answer != 'y' && answer != 'n')
+	{
+		std::cout << "Invalid answer! Please answer with Yes(Y) or No(N).\n";
+		std::cout << question;
+		std::cin >> answer;
+	}
+	std::cin.ignore();
+
+	return answer;
+}
+
+void TicketOffice::get_worst_events_indexes(std::vector<size_t>& indexes, const Date& from, const Date& to) const
+{
+	for (size_t i = 0; i < m_events.size(); ++i)
+	{
+		Date date = m_events[i].get_date();
+
+		if (m_events[i].attendance_percentage() < 10 && date >= from && date <= to)
+		{
+			indexes.emplace_back(i);
+		}
+	}
+}
+
 std::ostream& operator<<(std::ostream & out, const TicketOffice & office)
 {
 	out << LAST_CODE_PREFIX << office.m_gen.get_last_code() << '\n';

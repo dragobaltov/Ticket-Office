@@ -30,9 +30,13 @@ public:
 	bool check_code(const Code&) const;
 	void report(const Date&, const Date&, size_t = 0) const;
 	void print_most_watched_events();
+	void worst_events(const Date&, const Date&);
 	void unload();
 private:
 	std::vector<Event> m_events{};
 	std::vector<std::pair<size_t, size_t>> m_halls_sizes{};
 	CodeGenerator m_gen{};
+
+	void get_worst_events_indexes(std::vector<size_t>&, const Date&, const Date&) const;
+	char get_answer(const std::string&) const;
 };

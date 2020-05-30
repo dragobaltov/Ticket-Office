@@ -57,6 +57,8 @@ void Engine::save_as(const std::string & file_name) const
 	}
 
 	save_data(out);
+
+	std::cout << "Successfully saved changes in " << file_name << '\n';
 }
 
 void Engine::close()

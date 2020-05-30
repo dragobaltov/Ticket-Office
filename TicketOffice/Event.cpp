@@ -98,6 +98,11 @@ size_t Event::get_sold_tickets_count() const
 	return m_hall.get_sold_places_count();
 }
 
+double Event::attendance_percentage() const
+{
+	return static_cast<double>(m_hall.get_sold_places_count()) / (m_hall.get_rows() * m_hall.get_seats()) * 100;
+}
+
 std::ostream& operator<<(std::ostream& out, const Event& event)
 {
 	out << NAME_PREFIX << event.m_name << '\n' << DATE_PREFIX << event.m_date << '\n' << event.m_hall;
