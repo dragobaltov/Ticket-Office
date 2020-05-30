@@ -13,27 +13,24 @@ Date::Date(size_t year, size_t month, size_t day)
 	set_day(day);
 }
 
-Date::Date(const std::string& text_date)
+Date::Date(const std::string & text_date)
 {
 	std::vector<std::string> tokens;
 	split(text_date, tokens, '-');
 
-	if (tokens.size() == 3)
-	{
-		set_year(num_parse(tokens[0]));
-		set_month(num_parse(tokens[1]));
-		set_day(num_parse(tokens[2]));
-	}
+	set_year(num_parse(tokens[0]));
+	set_month(num_parse(tokens[1]));
+	set_day(num_parse(tokens[2]));
 }
 
-Date::Date(const Date& other)
+Date::Date(const Date & other)
 {
 	set_year(other.m_year);
 	set_month(other.m_month);
 	set_day(other.m_day);
 }
 
-Date& Date::operator=(const Date& other)
+Date& Date::operator=(const Date & other)
 {
 	set_year(other.m_year);
 	set_month(other.m_month);

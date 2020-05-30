@@ -71,7 +71,7 @@ void TicketOffice::print_free_seats(const Date & date, const std::string & name)
 	}
 }
 
-bool TicketOffice::book_ticket(const Date & date, const std::string & name, size_t row, size_t seat, const std::string & note)
+bool TicketOffice::book_ticket(const Date & date, const std::string & name, size_t row, size_t seat, const std::string& note)
 {
 	for (size_t i = 0; i < m_events.size(); ++i)
 	{
@@ -222,19 +222,18 @@ void TicketOffice::worst_events(const Date& from, const Date& to)
 
 char TicketOffice::get_answer(const std::string& question) const
 {
-	char answer;
+	std::string answer = "";
 	std::cout << question;
-	std::cin >> answer;
+	std::getline(std::cin, answer);
 
-	while (answer != 'Y' && answer != 'N' && answer != 'y' && answer != 'n')
+	while (answer[0] != 'Y' && answer[0] != 'N' && answer[0] != 'y' && answer[0] != 'n')
 	{
 		std::cout << "Invalid answer! Please answer with Yes(Y) or No(N).\n";
 		std::cout << question;
-		std::cin >> answer;
+		std::getline(std::cin, answer);
 	}
-	std::cin.ignore();
 
-	return answer;
+	return answer[0];
 }
 
 void TicketOffice::get_worst_events_indexes(std::vector<size_t>& indexes, const Date& from, const Date& to) const
@@ -253,11 +252,13 @@ void TicketOffice::get_worst_events_indexes(std::vector<size_t>& indexes, const 
 std::ostream& operator<<(std::ostream & out, const TicketOffice & office)
 {
 	out << LAST_CODE_PREFIX << office.m_gen.get_last_code() << '\n';
+	size_t size = office.m_events.size();
 
-	for (size_t i = 0; i < office.m_events.size(); ++i)
+	for (size_t i = 0; i < size - 1; ++i)
 	{
-		out << office.m_events[i];
+		out << office.m_events[i] << '\n';
 	}
+	out << office.m_events[size - 1];
 
 	return out;
 }

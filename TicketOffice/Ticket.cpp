@@ -4,11 +4,7 @@
 
 Ticket::Ticket() = default;
 
-Ticket::Ticket(size_t row, size_t seat)
-{
-	m_row = row;
-	m_seat = seat;
-}
+Ticket::Ticket(size_t row, size_t seat) : m_row{ row }, m_seat{ seat }, m_status{TicketStatus::free} {}
 
 Ticket::Ticket(const Ticket & other) : m_row{ other.m_row }, m_seat{ other.m_seat }, m_note{ other.m_note },
 m_code{ other.m_code }, m_status{ other.m_status } {}

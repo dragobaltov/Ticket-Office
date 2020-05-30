@@ -1,0 +1,16 @@
+Last code: A2A2A2D
+Name: Shouto Na Slavi
+Date: 2020-06-15
+Hall: 5
+Sold tickets:
+Row: 4, Seat: 3, Code: A5A4A3B
+Row: 5, Seat: 5, Code: A5A5A5A
+Booked tickets:
+
+Name: Film
+Date: 2020-09-01
+Hall: 2
+Sold tickets:
+Row: 2, Seat: 2, Code: A2A2A2D
+Row: 3, Seat: 3, Code: A2A3A3C
+Booked tickets:

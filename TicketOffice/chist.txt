@@ -1,0 +1,16 @@
+Last code: A2A1A2B
+Name: film
+Date: 2020-12-12
+Hall: 5
+Sold tickets:
+Row: 1, Seat: 2, Code: A5A1A2A
+Booked tickets:
+Row: 1, Seat: 1, Note: no note
+
+Name: film2
+Date: 2020-12-12
+Hall: 2
+Sold tickets:
+Row: 1, Seat: 2, Code: A2A1A2B
+Booked tickets:
+Row: 1, Seat: 1, Note: yes note

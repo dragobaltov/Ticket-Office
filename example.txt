@@ -1,0 +1,35 @@
+open NewOffice.txt
+addevent 2020-06-15 5 Shouto Na Slavi
+addevent 2020-06-15 2 Shouto Na Slavi
+addevent 2020-09-1 2 Film
+InvalidCommandTest
+book 5 5 2020-06-15 Shouto Na Slavi
+no note
+book 5 5 2020-06-15 Shouto Na Slavi
+yes note
+buy 5 5 2020-06-15 Shouto Na Slavi
+buy 4 3 2020-06-15 Shouto Na Slavi
+unbook 1 1 2020-09-01 Film
+buy 3 3 2020-09-01 Film
+buy 2 2 2020-09-01 Film
+check A5A5A5A
+check invalidcode
+report 2020-01-01 2020-12-31
+report 2020-01-01 2020-12-31 2
+unbook 5 5 2020-06-15 Shouto Na Slavi
+save
+close
+open NewOffice.txt
+freeseats 2020-06-15 Shouto Na Slavi
+bookings
+bookings 2020-06-15 Shouto Na Slavi
+book 5 9 2020-09-01 Film
+bookings 2020-09-01
+saveas copy.txt
+open copy.txt
+close
+open copy.txt
+exit
+
+
+

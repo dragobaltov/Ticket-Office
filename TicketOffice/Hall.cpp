@@ -229,7 +229,7 @@ std::istream& operator>>(std::istream& in, Hall& hall)
 
 	std::getline(in, line);
 
-	while (!in.eof())
+	while (!in.eof() && line != "")
 	{
 		parse_ticket_line(line, row, seat, additional);
 		hall.book_ticket(row, seat, additional);
