@@ -30,6 +30,11 @@ void TicketOfficeEngine::execute_command(const std::string & command, const std:
 {
 	if (command == "open")
 	{
+		if (additional == "")
+		{
+			std::cout << "File name cannot be empty!\n";
+			return;
+		}
 		open(additional);
 	}
 	else if (command == "help")
@@ -54,6 +59,11 @@ void TicketOfficeEngine::execute_command(const std::string & command, const std:
 		}
 		else if (command == "saveas")
 		{
+			if (additional == "")
+			{
+				std::cout << "File name cannot be empty!\n";
+				return;
+			}
 			save_as(additional);
 		}
 		else if (command == "close")
