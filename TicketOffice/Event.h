@@ -9,6 +9,10 @@
 const std::string NAME_PREFIX = "Name: ";
 const std::string DATE_PREFIX = "Date: ";
 
+/*! \brief Keeps all the needed information for an event.
+ *
+ * Stores name, date and hall.
+*/
 class Event
 {
 	friend std::ostream& operator<<(std::ostream&, const Event&);

@@ -8,6 +8,9 @@ const std::string SEAT_PREFIX = "Seat: ";
 const std::string NOTE_PREFIX = "Note: ";
 const std::string CODE_PREFIX = "Code: ";
 
+/*! \brief An enum class that keeps the current status of the ticket.
+ * Possible statuses: free, booked, sold
+*/
 enum class TicketStatus
 {
 	free,
@@ -15,6 +18,11 @@ enum class TicketStatus
 	sold
 };
 
+/*! The class keeps number of row, number of seat in the hall. 
+ * It has a status that indicates wheter the ticket is free, booked or sold. Innitially, the status if free.
+ * The class also keeps a string, which represents a note in case the ticket was booked.
+ * It contains a code that is innitially empty and fills only when the ticket is sold.
+*/
 class Ticket
 {
 	friend std::ostream& operator<<(std::ostream&, const Ticket&);

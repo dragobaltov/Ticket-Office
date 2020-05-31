@@ -1,0 +1,70 @@
+\hypertarget{class_code}{}\doxysection{Code Class Reference}
+\label{class_code}\index{Code@{Code}}
+
+
+The class represents the code, which a ticket recieves when it\textquotesingle{}s sold.  
+
+
+
+
+{\ttfamily \#include $<$Code.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_code_af3c2fc98db9da7731eef3af34fef9c2d}{Code}} (const std\+::string \&)
+\item 
+\mbox{\Hypertarget{class_code_ae7b1d0b01ccc7f9c2177aa783bd0b0bc}\label{class_code_ae7b1d0b01ccc7f9c2177aa783bd0b0bc}} 
+{\bfseries Code} (const \mbox{\hyperlink{class_code}{Code}} \&)
+\item 
+\mbox{\Hypertarget{class_code_a44db44b20ae29cf0e5327bac9b34332d}\label{class_code_a44db44b20ae29cf0e5327bac9b34332d}} 
+\mbox{\hyperlink{class_code}{Code}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_code}{Code}} \&)
+\item 
+\mbox{\Hypertarget{class_code_ac6d0468be4e8f31d6f0f51dcac677ba1}\label{class_code_ac6d0468be4e8f31d6f0f51dcac677ba1}} 
+size\+\_\+t {\bfseries get\+\_\+hall\+\_\+num} () const
+\item 
+\mbox{\Hypertarget{class_code_a02074eec8b61b6d35e05b9abf9b102bf}\label{class_code_a02074eec8b61b6d35e05b9abf9b102bf}} 
+size\+\_\+t {\bfseries get\+\_\+row} () const
+\item 
+\mbox{\Hypertarget{class_code_a201259e10139a62d0c52009f648ad3d2}\label{class_code_a201259e10139a62d0c52009f648ad3d2}} 
+size\+\_\+t {\bfseries get\+\_\+seat} () const
+\item 
+\mbox{\Hypertarget{class_code_abdda07d12aa883accfc1d006cbbd2a68}\label{class_code_abdda07d12aa883accfc1d006cbbd2a68}} 
+void {\bfseries print\+\_\+place} () const
+\item 
+\mbox{\Hypertarget{class_code_a2517fc92b9202a1ac3cb352cfcaae433}\label{class_code_a2517fc92b9202a1ac3cb352cfcaae433}} 
+bool {\bfseries operator==} (const \mbox{\hyperlink{class_code}{Code}} \&) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_code_ac1365d9143fa97d3b654c70194fce40a}\label{class_code_ac1365d9143fa97d3b654c70194fce40a}} 
+class {\bfseries Code\+Generator}
+\item 
+\mbox{\Hypertarget{class_code_a5c19a2ea93be82e2e3ec66690181ec5c}\label{class_code_a5c19a2ea93be82e2e3ec66690181ec5c}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&, const \mbox{\hyperlink{class_code}{Code}} \&)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The class represents the code, which a ticket recieves when it\textquotesingle{}s sold. 
+
+\mbox{\hyperlink{class_code}{Code}} format\+: L\+H\+L\+R\+L\+SL~\newline
+ L -\/ uppercase latin letter~\newline
+ H -\/ hall number~\newline
+ R -\/ row~\newline
+ S -\/ seat 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_code_af3c2fc98db9da7731eef3af34fef9c2d}\label{class_code_af3c2fc98db9da7731eef3af34fef9c2d}} 
+\index{Code@{Code}!Code@{Code}}
+\index{Code@{Code}!Code@{Code}}
+\doxysubsubsection{\texorpdfstring{Code()}{Code()}}
+{\footnotesize\ttfamily Code\+::\+Code (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str\+\_\+code }\end{DoxyParamCaption})}
+
+The constructor enables direct parsing from string to \mbox{\hyperlink{class_code}{Code}}. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Ticket\+Office/Code.\+h\item 
+Ticket\+Office/Code.\+cpp\end{DoxyCompactItemize}

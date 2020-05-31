@@ -1,0 +1,151 @@
+\hypertarget{class_ticket_office}{}\doxysection{Ticket\+Office Class Reference}
+\label{class_ticket_office}\index{TicketOffice@{TicketOffice}}
+
+
+Stores all events and hall sizes.  
+
+
+
+
+{\ttfamily \#include $<$Ticket\+Office.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_ticket_office_ab83eee4c1c218bde058787fe6a8cfa0e}\label{class_ticket_office_ab83eee4c1c218bde058787fe6a8cfa0e}} 
+{\bfseries Ticket\+Office} (const \mbox{\hyperlink{class_ticket_office}{Ticket\+Office}} \&)
+\item 
+\mbox{\Hypertarget{class_ticket_office_a6112b4dba6d5448d157bc49c4bf2bc7b}\label{class_ticket_office_a6112b4dba6d5448d157bc49c4bf2bc7b}} 
+\mbox{\hyperlink{class_ticket_office}{Ticket\+Office}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_ticket_office}{Ticket\+Office}} \&)
+\item 
+void \mbox{\hyperlink{class_ticket_office_ad282e99ef21d681bea7e959f06f98775}{set\+\_\+generator}} (const \mbox{\hyperlink{class_code}{Code}} \&)
+\item 
+bool \mbox{\hyperlink{class_ticket_office_ac51d657f5532ac1dbcb102c47cb23d2f}{add\+\_\+event}} (const \mbox{\hyperlink{class_date}{Date}} \&, const std\+::string \&, size\+\_\+t)
+\item 
+void \mbox{\hyperlink{class_ticket_office_a931cc928eba964b0862bb089c42416c3}{print\+\_\+free\+\_\+seats}} (const \mbox{\hyperlink{class_date}{Date}} \&, const std\+::string \&) const
+\item 
+bool \mbox{\hyperlink{class_ticket_office_a905cb2978140bfac5bc7971f1c0c9ad1}{book\+\_\+ticket}} (const \mbox{\hyperlink{class_date}{Date}} \&, const std\+::string \&, size\+\_\+t, size\+\_\+t, const std\+::string \&)
+\item 
+bool \mbox{\hyperlink{class_ticket_office_a81a0384956c3556e8c68432dea879e36}{unbook\+\_\+ticket}} (const \mbox{\hyperlink{class_date}{Date}} \&, const std\+::string \&, size\+\_\+t, size\+\_\+t)
+\item 
+bool \mbox{\hyperlink{class_ticket_office_aea228a2a0189bb4578a0ba1f657b0614}{buy\+\_\+ticket}} (const \mbox{\hyperlink{class_date}{Date}} \&, const std\+::string \&, size\+\_\+t, size\+\_\+t)
+\item 
+void \mbox{\hyperlink{class_ticket_office_a983cbe9186fb0dd47edc55a4667f267b}{print\+\_\+bookings}} (const \mbox{\hyperlink{class_date}{Date}} \&=\{\}, const std\+::string \&=\char`\"{}\char`\"{}) const
+\item 
+\mbox{\Hypertarget{class_ticket_office_a2945e78deaa43926f49d39b87ea26b05}\label{class_ticket_office_a2945e78deaa43926f49d39b87ea26b05}} 
+bool {\bfseries check\+\_\+code} (const \mbox{\hyperlink{class_code}{Code}} \&) const
+\item 
+void \mbox{\hyperlink{class_ticket_office_a8c390f04d546df8bad17eaa570025eea}{report}} (const \mbox{\hyperlink{class_date}{Date}} \&, const \mbox{\hyperlink{class_date}{Date}} \&, size\+\_\+t=0) const
+\item 
+void \mbox{\hyperlink{class_ticket_office_a647bb6beb8230f2f2ae0c9e604a0d41b}{print\+\_\+most\+\_\+watched\+\_\+events}} ()
+\item 
+void \mbox{\hyperlink{class_ticket_office_a72210db9619c5501c833bc46fd31cd4e}{worst\+\_\+events}} (const \mbox{\hyperlink{class_date}{Date}} \&, const \mbox{\hyperlink{class_date}{Date}} \&)
+\item 
+void \mbox{\hyperlink{class_ticket_office_a9b0feda0f05a0592f6451f135cc09ee0}{unload}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{class_ticket_office_aa4a4deb7656d805f438e0bb43b6fe018}{operator$<$$<$}} (std\+::ostream \&, const \mbox{\hyperlink{class_ticket_office}{Ticket\+Office}} \&)
+\item 
+\mbox{\Hypertarget{class_ticket_office_a65fc7a9ef116c328e085cbff9f2fb5c7}\label{class_ticket_office_a65fc7a9ef116c328e085cbff9f2fb5c7}} 
+std\+::istream \& {\bfseries operator$>$$>$} (std\+::istream \&, \mbox{\hyperlink{class_ticket_office}{Ticket\+Office}} \&)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Stores all events and hall sizes. 
+
+Contains a vector of events, a vector of pairs, which represents the sizes of all halls, and a code generator. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_ticket_office_ac51d657f5532ac1dbcb102c47cb23d2f}\label{class_ticket_office_ac51d657f5532ac1dbcb102c47cb23d2f}} 
+\index{TicketOffice@{TicketOffice}!add\_event@{add\_event}}
+\index{add\_event@{add\_event}!TicketOffice@{TicketOffice}}
+\doxysubsubsection{\texorpdfstring{add\_event()}{add\_event()}}
+{\footnotesize\ttfamily bool Ticket\+Office\+::add\+\_\+event (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{date,  }\item[{const std\+::string \&}]{name,  }\item[{size\+\_\+t}]{hall\+\_\+num }\end{DoxyParamCaption})}
+
+Adds an event if it is not already scheduled for the given date and if the given hall is not occupied on this date. \mbox{\Hypertarget{class_ticket_office_a905cb2978140bfac5bc7971f1c0c9ad1}\label{class_ticket_office_a905cb2978140bfac5bc7971f1c0c9ad1}} 
+\index{TicketOffice@{TicketOffice}!book\_ticket@{book\_ticket}}
+\index{book\_ticket@{book\_ticket}!TicketOffice@{TicketOffice}}
+\doxysubsubsection{\texorpdfstring{book\_ticket()}{book\_ticket()}}
+{\footnotesize\ttfamily bool Ticket\+Office\+::book\+\_\+ticket (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{date,  }\item[{const std\+::string \&}]{name,  }\item[{size\+\_\+t}]{row,  }\item[{size\+\_\+t}]{seat,  }\item[{const std\+::string \&}]{note }\end{DoxyParamCaption})}
+
+Invokes book\+\_\+ticket method of \mbox{\hyperlink{class_event}{Event}} if there is an event with the same date and name. \mbox{\Hypertarget{class_ticket_office_aea228a2a0189bb4578a0ba1f657b0614}\label{class_ticket_office_aea228a2a0189bb4578a0ba1f657b0614}} 
+\index{TicketOffice@{TicketOffice}!buy\_ticket@{buy\_ticket}}
+\index{buy\_ticket@{buy\_ticket}!TicketOffice@{TicketOffice}}
+\doxysubsubsection{\texorpdfstring{buy\_ticket()}{buy\_ticket()}}
+{\footnotesize\ttfamily bool Ticket\+Office\+::buy\+\_\+ticket (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{date,  }\item[{const std\+::string \&}]{name,  }\item[{size\+\_\+t}]{row,  }\item[{size\+\_\+t}]{seat }\end{DoxyParamCaption})}
+
+Invokes buy\+\_\+ticket method of \mbox{\hyperlink{class_event}{Event}} if there is an event with the same date and name. \mbox{\Hypertarget{class_ticket_office_a983cbe9186fb0dd47edc55a4667f267b}\label{class_ticket_office_a983cbe9186fb0dd47edc55a4667f267b}} 
+\index{TicketOffice@{TicketOffice}!print\_bookings@{print\_bookings}}
+\index{print\_bookings@{print\_bookings}!TicketOffice@{TicketOffice}}
+\doxysubsubsection{\texorpdfstring{print\_bookings()}{print\_bookings()}}
+{\footnotesize\ttfamily void Ticket\+Office\+::print\+\_\+bookings (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{date = {\ttfamily \{\}},  }\item[{const std\+::string \&}]{name = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption}) const}
+
+Case 1\+: Given date and name -\/ prints all booked tickets for the event with the same name and date if such exists.~\newline
+Case 2\+: Only date given -\/ prints all booked tickets for events with the same date if such exist.~\newline
+Case 3\+: Only name given -\/ prints all booked tickets for events with the same name if such exist.~\newline
+Case 4\+: Nothing given -\/ prints all booked tickets for all events if there are any. \mbox{\Hypertarget{class_ticket_office_a931cc928eba964b0862bb089c42416c3}\label{class_ticket_office_a931cc928eba964b0862bb089c42416c3}} 
+\index{TicketOffice@{TicketOffice}!print\_free\_seats@{print\_free\_seats}}
+\index{print\_free\_seats@{print\_free\_seats}!TicketOffice@{TicketOffice}}
+\doxysubsubsection{\texorpdfstring{print\_free\_seats()}{print\_free\_seats()}}
+{\footnotesize\ttfamily void Ticket\+Office\+::print\+\_\+free\+\_\+seats (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{date,  }\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const}
+
+Prints all free seats for the event with the same date and name if there is such. \mbox{\Hypertarget{class_ticket_office_a647bb6beb8230f2f2ae0c9e604a0d41b}\label{class_ticket_office_a647bb6beb8230f2f2ae0c9e604a0d41b}} 
+\index{TicketOffice@{TicketOffice}!print\_most\_watched\_events@{print\_most\_watched\_events}}
+\index{print\_most\_watched\_events@{print\_most\_watched\_events}!TicketOffice@{TicketOffice}}
+\doxysubsubsection{\texorpdfstring{print\_most\_watched\_events()}{print\_most\_watched\_events()}}
+{\footnotesize\ttfamily void Ticket\+Office\+::print\+\_\+most\+\_\+watched\+\_\+events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Sorts the events vector by count of sold tickets. Prints top 5 events or all events if their count is less than or equal to 5. \mbox{\Hypertarget{class_ticket_office_a8c390f04d546df8bad17eaa570025eea}\label{class_ticket_office_a8c390f04d546df8bad17eaa570025eea}} 
+\index{TicketOffice@{TicketOffice}!report@{report}}
+\index{report@{report}!TicketOffice@{TicketOffice}}
+\doxysubsubsection{\texorpdfstring{report()}{report()}}
+{\footnotesize\ttfamily void Ticket\+Office\+::report (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{from,  }\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{to,  }\item[{size\+\_\+t}]{hall\+\_\+num = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+Prints sold tickets of every event held in the given period and in the given hall.~\newline
+If
+\begin{DoxyParams}{Parameters}
+{\em hall\+\_\+num} & is not specified, prints sold tickets for every event in this period. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_ticket_office_ad282e99ef21d681bea7e959f06f98775}\label{class_ticket_office_ad282e99ef21d681bea7e959f06f98775}} 
+\index{TicketOffice@{TicketOffice}!set\_generator@{set\_generator}}
+\index{set\_generator@{set\_generator}!TicketOffice@{TicketOffice}}
+\doxysubsubsection{\texorpdfstring{set\_generator()}{set\_generator()}}
+{\footnotesize\ttfamily void Ticket\+Office\+::set\+\_\+generator (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_code}{Code}} \&}]{last\+\_\+code }\end{DoxyParamCaption})}
+
+Sets the generator by the last used code. \mbox{\Hypertarget{class_ticket_office_a81a0384956c3556e8c68432dea879e36}\label{class_ticket_office_a81a0384956c3556e8c68432dea879e36}} 
+\index{TicketOffice@{TicketOffice}!unbook\_ticket@{unbook\_ticket}}
+\index{unbook\_ticket@{unbook\_ticket}!TicketOffice@{TicketOffice}}
+\doxysubsubsection{\texorpdfstring{unbook\_ticket()}{unbook\_ticket()}}
+{\footnotesize\ttfamily bool Ticket\+Office\+::unbook\+\_\+ticket (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{date,  }\item[{const std\+::string \&}]{name,  }\item[{size\+\_\+t}]{row,  }\item[{size\+\_\+t}]{seat }\end{DoxyParamCaption})}
+
+Invokes unbook\+\_\+ticket method of \mbox{\hyperlink{class_event}{Event}} if there is an event with the same date and name. \mbox{\Hypertarget{class_ticket_office_a9b0feda0f05a0592f6451f135cc09ee0}\label{class_ticket_office_a9b0feda0f05a0592f6451f135cc09ee0}} 
+\index{TicketOffice@{TicketOffice}!unload@{unload}}
+\index{unload@{unload}!TicketOffice@{TicketOffice}}
+\doxysubsubsection{\texorpdfstring{unload()}{unload()}}
+{\footnotesize\ttfamily void Ticket\+Office\+::unload (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Removes all events. \mbox{\Hypertarget{class_ticket_office_a72210db9619c5501c833bc46fd31cd4e}\label{class_ticket_office_a72210db9619c5501c833bc46fd31cd4e}} 
+\index{TicketOffice@{TicketOffice}!worst\_events@{worst\_events}}
+\index{worst\_events@{worst\_events}!TicketOffice@{TicketOffice}}
+\doxysubsubsection{\texorpdfstring{worst\_events()}{worst\_events()}}
+{\footnotesize\ttfamily void Ticket\+Office\+::worst\+\_\+events (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{from,  }\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{to }\end{DoxyParamCaption})}
+
+Prints all events with attendance under 10\% and gives the user a choice whether or not to remove them. 
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_ticket_office_aa4a4deb7656d805f438e0bb43b6fe018}\label{class_ticket_office_aa4a4deb7656d805f438e0bb43b6fe018}} 
+\index{TicketOffice@{TicketOffice}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!TicketOffice@{TicketOffice}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out,  }\item[{const \mbox{\hyperlink{class_ticket_office}{Ticket\+Office}} \&}]{office }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+First, prints the last used code and then prints all events. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Ticket\+Office/Ticket\+Office.\+h\item 
+Ticket\+Office/Ticket\+Office.\+cpp\end{DoxyCompactItemize}

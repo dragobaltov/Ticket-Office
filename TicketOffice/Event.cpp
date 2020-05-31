@@ -42,21 +42,25 @@ bool Event::buy_ticket(size_t row, size_t seat, const Code& code)
 	return m_hall.buy_ticket(row, seat, code);
 }
 
+/*! Checks if the date and the hall of the events are the same.*/
 bool Event::are_overlapping(const Date & date, size_t hall_num) const
 {
 	return m_date == date && get_hall_num() == hall_num;
 }
 
+/*! Checks if the name and the date of the events are the same.*/
 bool Event::are_same(const std::string & name, const Date & date) const
 {
 	return m_name == name && m_date == date;
 }
 
+/*! Compares names, dates and hall numbers.*/
 bool Event::operator==(const Event & other) const
 {
 	return m_name == other.m_name && m_date == other.m_date && get_hall_num() == other.get_hall_num();
 }
 
+/*! Prints basic info about the event and all tickets with the given status if any.*/
 void Event::print_tickets_with_status(TicketStatus status) const
 {
 	std::cout << "Event name: " << m_name << '\n' << "Date: " << m_date << '\n' << "Hall: " << get_hall_num() << '\n';
@@ -98,6 +102,7 @@ size_t Event::get_sold_tickets_count() const
 	return m_hall.get_sold_places_count();
 }
 
+/*! Calculates what pecentage of the tickets available for the event are sold.*/
 double Event::attendance_percentage() const
 {
 	return static_cast<double>(m_hall.get_sold_places_count()) / (m_hall.get_rows() * m_hall.get_seats()) * 100;

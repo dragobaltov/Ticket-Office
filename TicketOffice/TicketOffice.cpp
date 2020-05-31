@@ -25,16 +25,19 @@ TicketOffice& TicketOffice::operator=(const TicketOffice & other)
 	return *this;
 }
 
-void TicketOffice::set_generator(const Code & last_code)
+/*! Sets the generator by the last used code.*/
+void TicketOffice::set_generator(const Code& last_code)
 {
 	m_gen = CodeGenerator(last_code);
 }
 
+/*! Removes all events.*/
 void TicketOffice::unload()
 {
 	m_events.clear();
 }
 
+/*! Adds an event if it is not already scheduled for the given date and if the given hall is not occupied on this date.*/
 bool TicketOffice::add_event(const Date & date, const std::string & name, size_t hall_num)
 {
 	for (size_t i = 0; i < m_events.size(); ++i)
@@ -52,6 +55,7 @@ bool TicketOffice::add_event(const Date & date, const std::string & name, size_t
 	return true;
 }
 
+/*! Prints all free seats for the event with the same date and name if there is such.*/
 void TicketOffice::print_free_seats(const Date & date, const std::string & name) const
 {
 	bool found = false;
@@ -71,6 +75,7 @@ void TicketOffice::print_free_seats(const Date & date, const std::string & name)
 	}
 }
 
+/*! Invokes book_ticket method of Event if there is an event with the same date and name.*/
 bool TicketOffice::book_ticket(const Date & date, const std::string & name, size_t row, size_t seat, const std::string& note)
 {
 	for (size_t i = 0; i < m_events.size(); ++i)
@@ -84,6 +89,7 @@ bool TicketOffice::book_ticket(const Date & date, const std::string & name, size
 	return false;
 }
 
+/*! Invokes unbook_ticket method of Event if there is an event with the same date and name.*/
 bool TicketOffice::unbook_ticket(const Date & date, const std::string & name, size_t row, size_t seat)
 {
 	for (size_t i = 0; i < m_events.size(); ++i)
@@ -97,6 +103,7 @@ bool TicketOffice::unbook_ticket(const Date & date, const std::string & name, si
 	return false;
 }
 
+/*! Invokes buy_ticket method of Event if there is an event with the same date and name.*/
 bool TicketOffice::buy_ticket(const Date & date, const std::string & name, size_t row, size_t seat)
 {
 	for (size_t i = 0; i < m_events.size(); ++i)
@@ -111,6 +118,11 @@ bool TicketOffice::buy_ticket(const Date & date, const std::string & name, size_
 	return false;
 }
 
+/*! Case 1: Given date and name - prints all booked tickets for the event with the same name and date if such exists.\n
+ * Case 2: Only date given - prints all booked tickets for events with the same date if such exist.\n
+ * Case 3: Only name given - prints all booked tickets for events with the same name if such exist.\n
+ * Case 4: Nothing given - prints all booked tickets for all events if there are any.
+*/
 void TicketOffice::print_bookings(const Date & date, const std::string & name) const
 {
 	if (name == "" && date == Date())
@@ -162,6 +174,9 @@ bool TicketOffice::check_code(const Code & code) const
 	return false;
 }
 
+/*! Prints sold tickets of every event held in the given period and in the given hall.\n
+ * If @param hall_num is not specified, prints sold tickets for every event in this period.
+*/
 void TicketOffice::report(const Date & from, const Date & to, size_t hall_num) const
 {
 	for (size_t i = 0; i < m_events.size(); ++i)
@@ -176,6 +191,9 @@ void TicketOffice::report(const Date & from, const Date & to, size_t hall_num) c
 	}
 }
 
+/*! Sorts the events vector by count of sold tickets. 
+ * Prints top 5 events or all events if their count is less than or equal to 5.
+ */
 void TicketOffice::print_most_watched_events()
 {
 	std::sort(m_events.begin(), m_events.end(), [](const Event& e1, const Event& e2) -> bool
@@ -191,6 +209,7 @@ void TicketOffice::print_most_watched_events()
 	}
 }
 
+/*! Prints all events with attendance under 10% and gives the user a choice whether or not to remove them.*/
 void TicketOffice::worst_events(const Date& from, const Date& to)
 {
 	std::vector<size_t> worst_events_indexes{};
@@ -220,6 +239,7 @@ void TicketOffice::worst_events(const Date& from, const Date& to)
 	}
 }
 
+/*! Gets yes or no answer from the user to the given question.*/
 char TicketOffice::get_answer(const std::string& question) const
 {
 	std::string answer = "";
@@ -249,6 +269,7 @@ void TicketOffice::get_worst_events_indexes(std::vector<size_t>& indexes, const 
 	}
 }
 
+/*! First, prints the last used code and then prints all events.*/
 std::ostream& operator<<(std::ostream & out, const TicketOffice & office)
 {
 	out << LAST_CODE_PREFIX << office.m_gen.get_last_code() << '\n';

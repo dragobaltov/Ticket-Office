@@ -4,6 +4,7 @@
 
 Hall::Hall() = default;
 
+/*! Sets default values of (rows*seats) number of tickets.*/
 Hall::Hall(size_t num, size_t rows, size_t seats)
 {
 	set_num(num);
@@ -60,6 +61,7 @@ size_t Hall::get_seats() const
 	return m_seats;
 }
 
+/*! Gets the count of all sold tickets in the hall.*/
 size_t Hall::get_sold_places_count() const
 {
 	size_t count = 0;
@@ -75,16 +77,19 @@ size_t Hall::get_sold_places_count() const
 	return count;
 }
 
+/*! Checks whether row and seat are valid for this hall.*/
 bool Hall::place_is_valid(size_t row, size_t seat) const
 {
 	return row >= 1 && row <= m_rows && seat >= 1 && seat <= m_seats;
 }
 
+/*! Changes the status of the ticket on the given row and seat.*/
 void Hall::change_ticket_status(size_t row, size_t seat, TicketStatus status)
 {
 	m_tickets[(row - 1) * m_seats + seat - 1].set_status(status);
 }
 
+/*! Prints all tickets with the given status.*/
 bool Hall::print_tickets_with_status(TicketStatus status, std::ostream& out) const
 {
 	bool has_sold_tickets = false;
@@ -111,6 +116,7 @@ Ticket& Hall::operator[](size_t index)
 	return m_tickets[index];
 }
 
+/* Set the ticket status to booked and adds the note if the given place is valid and if the ticket is not already booked or sold.*/
 bool Hall::book_ticket(size_t row, size_t seat, const std::string& note)
 {
 	if (!place_is_valid(row, seat))
@@ -131,6 +137,7 @@ bool Hall::book_ticket(size_t row, size_t seat, const std::string& note)
 	return true;
 }
 
+/* Set the ticket status to free if the given place is valid and if the ticket is not already sold.*/
 bool Hall::unbook_ticket(size_t row, size_t seat)
 {
 	if (!place_is_valid(row, seat))
@@ -150,6 +157,7 @@ bool Hall::unbook_ticket(size_t row, size_t seat)
 	return true;
 }
 
+/* Set the ticket status to sold and gives it a code if the given place is valid and if the ticket is not already sold.*/
 bool Hall::buy_ticket(size_t row, size_t seat, const Code& code)
 {
 	if (!place_is_valid(row, seat))
@@ -170,6 +178,7 @@ bool Hall::buy_ticket(size_t row, size_t seat, const Code& code)
 	return true;
 }
 
+/*! Checks if there is a ticket with the same code in this hall.*/
 bool Hall::check_code(const Code& code) const
 {
 	if (code.get_hall_num() != m_num)
@@ -206,6 +215,7 @@ std::ostream& operator<<(std::ostream& out, const Hall& hall)
 	return out;
 }
 
+/*! First, prints the hall number. Then, all booked tickets and finnaly all sold ones.*/
 std::istream& operator>>(std::istream& in, Hall& hall)
 {
 	std::string line = "";

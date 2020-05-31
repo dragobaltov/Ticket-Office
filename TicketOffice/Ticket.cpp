@@ -65,6 +65,7 @@ TicketStatus Ticket::get_status() const
 	return m_status;
 }
 
+/*! Compares rows and seats.*/
 bool Ticket::operator==(const Ticket & other) const
 {
 	return m_row == other.m_row && m_seat == other.m_seat;

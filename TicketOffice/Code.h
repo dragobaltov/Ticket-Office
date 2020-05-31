@@ -3,12 +3,21 @@
 
 size_t to_int(const std::string&);
 
+/*! \brief The class represents the code, which a ticket recieves when it's sold.
+ *
+ * Code format: LHLRLSL\n
+ *				L - uppercase latin letter\n
+ *				H - hall number\n
+ *				R - row\n
+ *				S - seat
+*/
 class Code
 {
 	friend std::ostream& operator<<(std::ostream&, const Code&);
 	friend class CodeGenerator;
 public:
 	Code();
+	/*! The constructor enables direct parsing from string to Code.*/
 	Code(const std::string&);
 	Code(const Code&);
 	~Code();
@@ -29,6 +38,7 @@ private:
 	char m_third{' '};
 	char m_forth{' '};
 
+	/*! Parses string to Code*/
 	void decypher_code(const std::string&);
 	size_t get_num(const std::string&, size_t&) const;
 };

@@ -1,0 +1,68 @@
+\hypertarget{class_ticket}{}\doxysection{Ticket Class Reference}
+\label{class_ticket}\index{Ticket@{Ticket}}
+
+
+{\ttfamily \#include $<$Ticket.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_ticket_a4e50dba0591f06d6699efd913767888f}\label{class_ticket_a4e50dba0591f06d6699efd913767888f}} 
+{\bfseries Ticket} (size\+\_\+t, size\+\_\+t)
+\item 
+\mbox{\Hypertarget{class_ticket_a425a21bbd741dbeb7b73752f09190712}\label{class_ticket_a425a21bbd741dbeb7b73752f09190712}} 
+{\bfseries Ticket} (const \mbox{\hyperlink{class_ticket}{Ticket}} \&)
+\item 
+\mbox{\Hypertarget{class_ticket_a629434eda0c28aa953b01cf7cc2eac61}\label{class_ticket_a629434eda0c28aa953b01cf7cc2eac61}} 
+\mbox{\hyperlink{class_ticket}{Ticket}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_ticket}{Ticket}} \&)
+\item 
+\mbox{\Hypertarget{class_ticket_ab35d051334671fed37be5db132c487b2}\label{class_ticket_ab35d051334671fed37be5db132c487b2}} 
+void {\bfseries set\+\_\+code} (const \mbox{\hyperlink{class_code}{Code}} \&)
+\item 
+\mbox{\Hypertarget{class_ticket_a7c5e82f5cc3a628a4c3281d9860e4389}\label{class_ticket_a7c5e82f5cc3a628a4c3281d9860e4389}} 
+void {\bfseries set\+\_\+note} (const std\+::string \&)
+\item 
+\mbox{\Hypertarget{class_ticket_aec11b2de7dd626fda2f92c7d776a6a7f}\label{class_ticket_aec11b2de7dd626fda2f92c7d776a6a7f}} 
+void {\bfseries set\+\_\+status} (Ticket\+Status)
+\item 
+\mbox{\Hypertarget{class_ticket_a616639311b635a2bbf84a20e169e9750}\label{class_ticket_a616639311b635a2bbf84a20e169e9750}} 
+size\+\_\+t {\bfseries get\+\_\+row} () const
+\item 
+\mbox{\Hypertarget{class_ticket_a188e3509117ccf9c52c1e20cdbcec36b}\label{class_ticket_a188e3509117ccf9c52c1e20cdbcec36b}} 
+size\+\_\+t {\bfseries get\+\_\+seat} () const
+\item 
+\mbox{\Hypertarget{class_ticket_af402d6e19c48c4128c53befed9e93941}\label{class_ticket_af402d6e19c48c4128c53befed9e93941}} 
+const std\+::string \& {\bfseries get\+\_\+note} () const
+\item 
+\mbox{\Hypertarget{class_ticket_a3ddfeddf5c7f7990cbd5a0195298979d}\label{class_ticket_a3ddfeddf5c7f7990cbd5a0195298979d}} 
+const \mbox{\hyperlink{class_code}{Code}} \& {\bfseries get\+\_\+code} () const
+\item 
+\mbox{\Hypertarget{class_ticket_a39de0158a6c2a80b0368a19bba201a3f}\label{class_ticket_a39de0158a6c2a80b0368a19bba201a3f}} 
+Ticket\+Status {\bfseries get\+\_\+status} () const
+\item 
+bool \mbox{\hyperlink{class_ticket_aa2f78a0a0c28cbef482f28ff91626473}{operator==}} (const \mbox{\hyperlink{class_ticket}{Ticket}} \&) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_ticket_a9f09b156bfef043ef8495fff634c095d}\label{class_ticket_a9f09b156bfef043ef8495fff634c095d}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&, const \mbox{\hyperlink{class_ticket}{Ticket}} \&)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The class keeps number of row, number of seat in the hall. It has a status that indicates wheter the ticket is free, booked or sold. Innitially, the status if free. The class also keeps a string, which represents a note in case the ticket was booked. It contains a code that is innitially empty and fills only when the ticket is sold. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_ticket_aa2f78a0a0c28cbef482f28ff91626473}\label{class_ticket_aa2f78a0a0c28cbef482f28ff91626473}} 
+\index{Ticket@{Ticket}!operator==@{operator==}}
+\index{operator==@{operator==}!Ticket@{Ticket}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Ticket\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_ticket}{Ticket}} \&}]{other }\end{DoxyParamCaption}) const}
+
+Compares rows and seats. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Ticket\+Office/Ticket.\+h\item 
+Ticket\+Office/Ticket.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,65 @@
+\hypertarget{class_code_generator}{}\doxysection{Code\+Generator Class Reference}
+\label{class_code_generator}\index{CodeGenerator@{CodeGenerator}}
+
+
+Generates codes for the sold tickets.  
+
+
+
+
+{\ttfamily \#include $<$Code\+Generator.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_code_generator_abff3382582ed9869d0d252ec18d375e7}{Code\+Generator}} (const \mbox{\hyperlink{class_code}{Code}} \&)
+\item 
+\mbox{\Hypertarget{class_code_generator_ab5f54f921b30dea21771c05c96dc3971}\label{class_code_generator_ab5f54f921b30dea21771c05c96dc3971}} 
+{\bfseries Code\+Generator} (const \mbox{\hyperlink{class_code_generator}{Code\+Generator}} \&)
+\item 
+\mbox{\Hypertarget{class_code_generator_ac6f218dc630f309690ffb9f3170f4aee}\label{class_code_generator_ac6f218dc630f309690ffb9f3170f4aee}} 
+\mbox{\hyperlink{class_code_generator}{Code\+Generator}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_code_generator}{Code\+Generator}} \&)
+\item 
+\mbox{\hyperlink{class_code}{Code}} \mbox{\hyperlink{class_code_generator_ab9599f9b0a00fc08f842dd0d765222bb}{generate}} (size\+\_\+t, size\+\_\+t, size\+\_\+t)
+\item 
+\mbox{\Hypertarget{class_code_generator_aa8244058465687957e7722ae3983ffc8}\label{class_code_generator_aa8244058465687957e7722ae3983ffc8}} 
+const \mbox{\hyperlink{class_code}{Code}} \& {\bfseries get\+\_\+last\+\_\+code} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Generates codes for the sold tickets. 
+
+Keeps the last used code in the program as a field 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_code_generator_abff3382582ed9869d0d252ec18d375e7}\label{class_code_generator_abff3382582ed9869d0d252ec18d375e7}} 
+\index{CodeGenerator@{CodeGenerator}!CodeGenerator@{CodeGenerator}}
+\index{CodeGenerator@{CodeGenerator}!CodeGenerator@{CodeGenerator}}
+\doxysubsubsection{\texorpdfstring{CodeGenerator()}{CodeGenerator()}}
+{\footnotesize\ttfamily Code\+Generator\+::\+Code\+Generator (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_code}{Code}} \&}]{code }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em code} & This is the last used code in the program. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_code_generator_ab9599f9b0a00fc08f842dd0d765222bb}\label{class_code_generator_ab9599f9b0a00fc08f842dd0d765222bb}} 
+\index{CodeGenerator@{CodeGenerator}!generate@{generate}}
+\index{generate@{generate}!CodeGenerator@{CodeGenerator}}
+\doxysubsubsection{\texorpdfstring{generate()}{generate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_code}{Code}} Code\+Generator\+::generate (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{hall\+\_\+num,  }\item[{size\+\_\+t}]{row,  }\item[{size\+\_\+t}]{seat }\end{DoxyParamCaption})}
+
+Generates the next code.~\newline
+Example\+: generate(5, 6, 1)~\newline
+ Last code = A8\+B3\+C5B~\newline
+ Next code = A5\+B6\+C1C~\newline
+It increments the last letter. If it was Z, then it becomes A and the third letter increments. If it was Z, then it becomes A and the second letter increments and so on. Finnaly, sets the last code to the generated code. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Ticket\+Office/Code\+Generator.\+h\item 
+Ticket\+Office/Code\+Generator.\+cpp\end{DoxyCompactItemize}

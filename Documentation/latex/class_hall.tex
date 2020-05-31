@@ -1,0 +1,119 @@
+\hypertarget{class_hall}{}\doxysection{Hall Class Reference}
+\label{class_hall}\index{Hall@{Hall}}
+
+
+{\ttfamily \#include $<$Hall.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_hall_a44ccfeaf47558216de6bf3868b9e0490}{Hall}} (size\+\_\+t, size\+\_\+t, size\+\_\+t)
+\item 
+\mbox{\Hypertarget{class_hall_a39ccddbaef31fa4c27b2e463303b2986}\label{class_hall_a39ccddbaef31fa4c27b2e463303b2986}} 
+{\bfseries Hall} (const \mbox{\hyperlink{class_hall}{Hall}} \&)
+\item 
+\mbox{\Hypertarget{class_hall_a369b39655c1f00fc2cf15b04a200ea2b}\label{class_hall_a369b39655c1f00fc2cf15b04a200ea2b}} 
+\mbox{\hyperlink{class_hall}{Hall}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_hall}{Hall}} \&)
+\item 
+\mbox{\Hypertarget{class_hall_aaa6494d7fa62ac3b0f9b6568ef5a198a}\label{class_hall_aaa6494d7fa62ac3b0f9b6568ef5a198a}} 
+void {\bfseries set\+\_\+num} (size\+\_\+t)
+\item 
+\mbox{\Hypertarget{class_hall_a73a7db67d6469ab0e7d593fff5f463ef}\label{class_hall_a73a7db67d6469ab0e7d593fff5f463ef}} 
+size\+\_\+t {\bfseries get\+\_\+num} () const
+\item 
+\mbox{\Hypertarget{class_hall_ab8af4015ad9623afc5a220fe3a6eed78}\label{class_hall_ab8af4015ad9623afc5a220fe3a6eed78}} 
+size\+\_\+t {\bfseries get\+\_\+rows} () const
+\item 
+\mbox{\Hypertarget{class_hall_a3fb9081df7986244e01bf1670e800579}\label{class_hall_a3fb9081df7986244e01bf1670e800579}} 
+size\+\_\+t {\bfseries get\+\_\+seats} () const
+\item 
+size\+\_\+t \mbox{\hyperlink{class_hall_adcf57ae7a48f20d78baac7adf2fbea1b}{get\+\_\+sold\+\_\+places\+\_\+count}} () const
+\item 
+bool \mbox{\hyperlink{class_hall_a338267425635344af8acc989d5e3b456}{place\+\_\+is\+\_\+valid}} (size\+\_\+t, size\+\_\+t) const
+\item 
+void \mbox{\hyperlink{class_hall_a4a1da0e3e5c0949bcf17f2ad62aa4f55}{change\+\_\+ticket\+\_\+status}} (size\+\_\+t, size\+\_\+t, Ticket\+Status)
+\item 
+bool \mbox{\hyperlink{class_hall_aac0ade05d74b7d1c9ad2575a3ded6c6e}{print\+\_\+tickets\+\_\+with\+\_\+status}} (Ticket\+Status, std\+::ostream \&) const
+\item 
+\mbox{\Hypertarget{class_hall_a8c27e8db23b55f85df67cd992c269f2f}\label{class_hall_a8c27e8db23b55f85df67cd992c269f2f}} 
+\mbox{\hyperlink{class_ticket}{Ticket}} \& {\bfseries operator\mbox{[}$\,$\mbox{]}} (size\+\_\+t)
+\item 
+\mbox{\Hypertarget{class_hall_a640f9bf39567d2fcbcfc8869eb29d37b}\label{class_hall_a640f9bf39567d2fcbcfc8869eb29d37b}} 
+bool {\bfseries book\+\_\+ticket} (size\+\_\+t, size\+\_\+t, const std\+::string \&)
+\item 
+\mbox{\Hypertarget{class_hall_a2e0aef6c82c11e88e1336064d94ad7b5}\label{class_hall_a2e0aef6c82c11e88e1336064d94ad7b5}} 
+bool {\bfseries unbook\+\_\+ticket} (size\+\_\+t, size\+\_\+t)
+\item 
+\mbox{\Hypertarget{class_hall_ab7c8fc1ab303b9d6635a611d8f2b5161}\label{class_hall_ab7c8fc1ab303b9d6635a611d8f2b5161}} 
+bool {\bfseries buy\+\_\+ticket} (size\+\_\+t, size\+\_\+t, const \mbox{\hyperlink{class_code}{Code}} \&)
+\item 
+bool \mbox{\hyperlink{class_hall_a6e5af5a5abbb95591111591271c9df17}{check\+\_\+code}} (const \mbox{\hyperlink{class_code}{Code}} \&) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_hall_a2508f7094739513f1f98096f84e1bd88}\label{class_hall_a2508f7094739513f1f98096f84e1bd88}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&, const \mbox{\hyperlink{class_hall}{Hall}} \&)
+\item 
+std\+::istream \& \mbox{\hyperlink{class_hall_afef54f7179ef52ce3f77509edd814f66}{operator$>$$>$}} (std\+::istream \&, \mbox{\hyperlink{class_hall}{Hall}} \&)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_hall}{Hall}} class contains a number, count of rows and seats and a vector of tickets. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_hall_a44ccfeaf47558216de6bf3868b9e0490}\label{class_hall_a44ccfeaf47558216de6bf3868b9e0490}} 
+\index{Hall@{Hall}!Hall@{Hall}}
+\index{Hall@{Hall}!Hall@{Hall}}
+\doxysubsubsection{\texorpdfstring{Hall()}{Hall()}}
+{\footnotesize\ttfamily Hall\+::\+Hall (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{num,  }\item[{size\+\_\+t}]{rows,  }\item[{size\+\_\+t}]{seats }\end{DoxyParamCaption})}
+
+Sets default values of (rows$\ast$seats) number of tickets. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_hall_a4a1da0e3e5c0949bcf17f2ad62aa4f55}\label{class_hall_a4a1da0e3e5c0949bcf17f2ad62aa4f55}} 
+\index{Hall@{Hall}!change\_ticket\_status@{change\_ticket\_status}}
+\index{change\_ticket\_status@{change\_ticket\_status}!Hall@{Hall}}
+\doxysubsubsection{\texorpdfstring{change\_ticket\_status()}{change\_ticket\_status()}}
+{\footnotesize\ttfamily void Hall\+::change\+\_\+ticket\+\_\+status (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{row,  }\item[{size\+\_\+t}]{seat,  }\item[{Ticket\+Status}]{status }\end{DoxyParamCaption})}
+
+Changes the status of the ticket on the given row and seat. \mbox{\Hypertarget{class_hall_a6e5af5a5abbb95591111591271c9df17}\label{class_hall_a6e5af5a5abbb95591111591271c9df17}} 
+\index{Hall@{Hall}!check\_code@{check\_code}}
+\index{check\_code@{check\_code}!Hall@{Hall}}
+\doxysubsubsection{\texorpdfstring{check\_code()}{check\_code()}}
+{\footnotesize\ttfamily bool Hall\+::check\+\_\+code (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_code}{Code}} \&}]{code }\end{DoxyParamCaption}) const}
+
+Checks if there is a ticket with the same code in this hall. \mbox{\Hypertarget{class_hall_adcf57ae7a48f20d78baac7adf2fbea1b}\label{class_hall_adcf57ae7a48f20d78baac7adf2fbea1b}} 
+\index{Hall@{Hall}!get\_sold\_places\_count@{get\_sold\_places\_count}}
+\index{get\_sold\_places\_count@{get\_sold\_places\_count}!Hall@{Hall}}
+\doxysubsubsection{\texorpdfstring{get\_sold\_places\_count()}{get\_sold\_places\_count()}}
+{\footnotesize\ttfamily size\+\_\+t Hall\+::get\+\_\+sold\+\_\+places\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Gets the count of all sold tickets in the hall. \mbox{\Hypertarget{class_hall_a338267425635344af8acc989d5e3b456}\label{class_hall_a338267425635344af8acc989d5e3b456}} 
+\index{Hall@{Hall}!place\_is\_valid@{place\_is\_valid}}
+\index{place\_is\_valid@{place\_is\_valid}!Hall@{Hall}}
+\doxysubsubsection{\texorpdfstring{place\_is\_valid()}{place\_is\_valid()}}
+{\footnotesize\ttfamily bool Hall\+::place\+\_\+is\+\_\+valid (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{row,  }\item[{size\+\_\+t}]{seat }\end{DoxyParamCaption}) const}
+
+Checks whether row and seat are valid for this hall. \mbox{\Hypertarget{class_hall_aac0ade05d74b7d1c9ad2575a3ded6c6e}\label{class_hall_aac0ade05d74b7d1c9ad2575a3ded6c6e}} 
+\index{Hall@{Hall}!print\_tickets\_with\_status@{print\_tickets\_with\_status}}
+\index{print\_tickets\_with\_status@{print\_tickets\_with\_status}!Hall@{Hall}}
+\doxysubsubsection{\texorpdfstring{print\_tickets\_with\_status()}{print\_tickets\_with\_status()}}
+{\footnotesize\ttfamily bool Hall\+::print\+\_\+tickets\+\_\+with\+\_\+status (\begin{DoxyParamCaption}\item[{Ticket\+Status}]{status,  }\item[{std\+::ostream \&}]{out }\end{DoxyParamCaption}) const}
+
+Prints all tickets with the given status. 
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_hall_afef54f7179ef52ce3f77509edd814f66}\label{class_hall_afef54f7179ef52ce3f77509edd814f66}} 
+\index{Hall@{Hall}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Hall@{Hall}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$}{operator>>}}
+{\footnotesize\ttfamily std\+::istream\& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{in,  }\item[{\mbox{\hyperlink{class_hall}{Hall}} \&}]{hall }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+First, prints the hall number. Then, all booked tickets and finnaly all sold ones. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Ticket\+Office/Hall.\+h\item 
+Ticket\+Office/Hall.\+cpp\end{DoxyCompactItemize}

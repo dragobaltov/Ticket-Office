@@ -1,6 +1,10 @@
 #pragma once
 #include "Code.h"
 
+/*! \brief Generates codes for the sold tickets
+ *
+ * Keeps the last used code in the program as a field
+*/
 class CodeGenerator
 {
 public:

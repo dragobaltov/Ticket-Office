@@ -9,6 +9,7 @@ const std::string VALID_COMMANDS[COUNT_COMMANDS] = { "open", "save", "saveas", "
 
 std::string get_name(const std::vector<std::string>&, size_t);
 
+/*! \brief The class deals with user input and generates data for TicketOffice methods.*/
 class TicketOfficeEngine : public Engine
 {
 public:

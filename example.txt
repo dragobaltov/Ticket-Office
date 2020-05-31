@@ -1,3 +1,4 @@
+Test1:
 open NewOffice.txt
 addevent 2020-06-15 5 Shouto Na Slavi
 addevent 2020-06-15 2 Shouto Na Slavi
@@ -24,11 +25,27 @@ freeseats 2020-06-15 Shouto Na Slavi
 bookings
 bookings 2020-06-15 Shouto Na Slavi
 book 5 9 2020-09-01 Film
+adding note
 bookings 2020-09-01
 saveas copy.txt
 open copy.txt
 close
 open copy.txt
+exit
+
+Test2:
+addevent 2020-12-12 1 Film 2 part
+open NewOffice.txt
+addevent 2020-12-12 1 Film 2 part
+addevent Prosto Film
+bookings nzkwopisha
+help
+close
+addevent 2020-12-12 1 Film 3 part
+open copy.txt
+book bilet
+best
+worst 2020-1-1 2020-12-23
 exit
 
 

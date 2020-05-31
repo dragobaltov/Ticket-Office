@@ -10,6 +10,7 @@ const std::string HALL_NUM_PREFIX = "Hall: ";
 
 void parse_ticket_line(std::string&, size_t&, size_t&, std::string&);
 
+/*! The Hall class contains a number, count of rows and seats and a vector of tickets.*/
 class Hall
 {
 	friend std::ostream& operator<<(std::ostream&, const Hall&);
@@ -26,8 +27,8 @@ public:
 	size_t get_num() const;
 	size_t get_rows() const;
 	size_t get_seats() const;
+	
 	size_t get_sold_places_count() const;
-
 	bool place_is_valid(size_t, size_t) const;
 	void change_ticket_status(size_t, size_t, TicketStatus);
 	bool print_tickets_with_status(TicketStatus, std::ostream&) const;

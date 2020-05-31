@@ -1,3 +1,4 @@
-﻿  TicketOffice.cpp
-C:\Users\USER\source\repos\Ticket-Office\TicketOffice\TicketOffice.cpp(184,24): warning C4244: 'initializing': conversion from 'double' to 'size_t', possible loss of data
+﻿  Engine.cpp
+  Start.cpp
+  Generating Code...
   TicketOffice.vcxproj -> C:\Users\USER\source\repos\Ticket-Office\x64\Debug\Start.exe

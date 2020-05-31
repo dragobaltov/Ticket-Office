@@ -9,6 +9,10 @@
 
 const std::string LAST_CODE_PREFIX = "Last code: ";
 
+/*! \brief Stores all events and hall sizes.
+ * 
+ * Contains a vector of events, a vector of pairs, which represents the sizes of all halls, and a code generator.
+*/
 class TicketOffice
 {
 	friend std::ostream& operator<<(std::ostream&, const TicketOffice&);

@@ -2,7 +2,8 @@
 
 CodeGenerator::CodeGenerator() = default;
 
-CodeGenerator::CodeGenerator(const Code& other) : m_last_code{ other } {};
+/*! @param code This is the last used code in the program.*/
+CodeGenerator::CodeGenerator(const Code& code) : m_last_code{ code } {};
 
 CodeGenerator::CodeGenerator(const CodeGenerator& other) : m_last_code{ other.m_last_code } {};
 
@@ -18,6 +19,14 @@ CodeGenerator& CodeGenerator::operator=(const CodeGenerator& other)
 	return *this;
 }
 
+/*! Generates the next code.\n
+ * Example: generate(5, 6, 1)\n
+ *			Last code = A8B3C5B\n
+ *			Next code = A5B6C1C\n
+ * It increments the last letter. If it was Z, then it becomes A and the third letter increments.
+ * If it was Z, then it becomes A and the second letter increments and so on.
+ * Finnaly, sets the last code to the generated code.
+*/
 Code CodeGenerator::generate(size_t hall_num, size_t row, size_t seat)
 {
 	m_last_code.m_hall_num = hall_num;

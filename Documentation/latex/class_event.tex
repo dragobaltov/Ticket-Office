@@ -1,0 +1,116 @@
+\hypertarget{class_event}{}\doxysection{Event Class Reference}
+\label{class_event}\index{Event@{Event}}
+
+
+Keeps all the needed information for an event.  
+
+
+
+
+{\ttfamily \#include $<$Event.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_event_a6d6b524bacb7bfb2c56d641cbf6ff036}\label{class_event_a6d6b524bacb7bfb2c56d641cbf6ff036}} 
+{\bfseries Event} (const std\+::string \&, const \mbox{\hyperlink{class_date}{Date}} \&, const \mbox{\hyperlink{class_hall}{Hall}} \&)
+\item 
+\mbox{\Hypertarget{class_event_ac540d5e149dc8f0670ce49d1a1bc4d98}\label{class_event_ac540d5e149dc8f0670ce49d1a1bc4d98}} 
+{\bfseries Event} (const \mbox{\hyperlink{class_event}{Event}} \&)
+\item 
+\mbox{\Hypertarget{class_event_a8de9b70cc4a9e589b82e41d1b5b36228}\label{class_event_a8de9b70cc4a9e589b82e41d1b5b36228}} 
+\mbox{\hyperlink{class_event}{Event}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_event}{Event}} \&)
+\item 
+\mbox{\Hypertarget{class_event_a48ecb785ab5026f3f1c991a3233a79eb}\label{class_event_a48ecb785ab5026f3f1c991a3233a79eb}} 
+void {\bfseries set\+\_\+name} (const std\+::string \&)
+\item 
+\mbox{\Hypertarget{class_event_a0322f67fe005cb526878f64291f405af}\label{class_event_a0322f67fe005cb526878f64291f405af}} 
+void {\bfseries set\+\_\+date} (const \mbox{\hyperlink{class_date}{Date}} \&)
+\item 
+\mbox{\Hypertarget{class_event_a403c1356bacc8b5b648f267a323ae035}\label{class_event_a403c1356bacc8b5b648f267a323ae035}} 
+const std\+::string \& {\bfseries get\+\_\+name} () const
+\item 
+\mbox{\Hypertarget{class_event_a222904d44dfaf3f1f96e2190c5ea4293}\label{class_event_a222904d44dfaf3f1f96e2190c5ea4293}} 
+const \mbox{\hyperlink{class_date}{Date}} \& {\bfseries get\+\_\+date} () const
+\item 
+\mbox{\Hypertarget{class_event_ab29935b5928f8798cd362130495abe94}\label{class_event_ab29935b5928f8798cd362130495abe94}} 
+size\+\_\+t {\bfseries get\+\_\+hall\+\_\+num} () const
+\item 
+\mbox{\Hypertarget{class_event_ae83349aa0da3a43646c00d068ae28e6d}\label{class_event_ae83349aa0da3a43646c00d068ae28e6d}} 
+size\+\_\+t {\bfseries get\+\_\+sold\+\_\+tickets\+\_\+count} () const
+\item 
+double \mbox{\hyperlink{class_event_a99996298e4ac188af9bf95894dba86b6}{attendance\+\_\+percentage}} () const
+\item 
+\mbox{\Hypertarget{class_event_a4a1120992ee7c7e94bdf7cf919792f6d}\label{class_event_a4a1120992ee7c7e94bdf7cf919792f6d}} 
+bool {\bfseries book\+\_\+ticket} (size\+\_\+t, size\+\_\+t, const std\+::string \&)
+\item 
+\mbox{\Hypertarget{class_event_a3599d31bf8655d927c929c896fdc79b7}\label{class_event_a3599d31bf8655d927c929c896fdc79b7}} 
+bool {\bfseries unbook\+\_\+ticket} (size\+\_\+t, size\+\_\+t)
+\item 
+\mbox{\Hypertarget{class_event_a737b52a291b19a0cf3d81f8a30136791}\label{class_event_a737b52a291b19a0cf3d81f8a30136791}} 
+bool {\bfseries buy\+\_\+ticket} (size\+\_\+t, size\+\_\+t, const \mbox{\hyperlink{class_code}{Code}} \&)
+\item 
+bool \mbox{\hyperlink{class_event_a2de576d59f74c6594974cab03384e2c2}{are\+\_\+overlapping}} (const \mbox{\hyperlink{class_date}{Date}} \&, size\+\_\+t) const
+\item 
+bool \mbox{\hyperlink{class_event_a405246481922577e269bb6862acebb54}{are\+\_\+same}} (const std\+::string \&, const \mbox{\hyperlink{class_date}{Date}} \&) const
+\item 
+bool \mbox{\hyperlink{class_event_af88bc0eb4edce2ab3d504726476e4601}{operator==}} (const \mbox{\hyperlink{class_event}{Event}} \&) const
+\item 
+void \mbox{\hyperlink{class_event_a0475d499c1e8d9605e640b06909ecd6c}{print\+\_\+tickets\+\_\+with\+\_\+status}} (Ticket\+Status) const
+\item 
+\mbox{\Hypertarget{class_event_abbf884b4f04a0af4581d6371c05e1929}\label{class_event_abbf884b4f04a0af4581d6371c05e1929}} 
+bool {\bfseries check\+\_\+code} (const \mbox{\hyperlink{class_code}{Code}} \&) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_event_aa98bc3359d1497fbd3c123165af4b277}\label{class_event_aa98bc3359d1497fbd3c123165af4b277}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&, const \mbox{\hyperlink{class_event}{Event}} \&)
+\item 
+\mbox{\Hypertarget{class_event_ab38f67bfb2cc16c4eca92cf7574bc672}\label{class_event_ab38f67bfb2cc16c4eca92cf7574bc672}} 
+std\+::istream \& {\bfseries operator$>$$>$} (std\+::istream \&, \mbox{\hyperlink{class_event}{Event}} \&)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Keeps all the needed information for an event. 
+
+Stores name, date and hall. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_event_a2de576d59f74c6594974cab03384e2c2}\label{class_event_a2de576d59f74c6594974cab03384e2c2}} 
+\index{Event@{Event}!are\_overlapping@{are\_overlapping}}
+\index{are\_overlapping@{are\_overlapping}!Event@{Event}}
+\doxysubsubsection{\texorpdfstring{are\_overlapping()}{are\_overlapping()}}
+{\footnotesize\ttfamily bool Event\+::are\+\_\+overlapping (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{date,  }\item[{size\+\_\+t}]{hall\+\_\+num }\end{DoxyParamCaption}) const}
+
+Checks if the date and the hall of the events are the same. \mbox{\Hypertarget{class_event_a405246481922577e269bb6862acebb54}\label{class_event_a405246481922577e269bb6862acebb54}} 
+\index{Event@{Event}!are\_same@{are\_same}}
+\index{are\_same@{are\_same}!Event@{Event}}
+\doxysubsubsection{\texorpdfstring{are\_same()}{are\_same()}}
+{\footnotesize\ttfamily bool Event\+::are\+\_\+same (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{date }\end{DoxyParamCaption}) const}
+
+Checks if the name and the date of the events are the same. \mbox{\Hypertarget{class_event_a99996298e4ac188af9bf95894dba86b6}\label{class_event_a99996298e4ac188af9bf95894dba86b6}} 
+\index{Event@{Event}!attendance\_percentage@{attendance\_percentage}}
+\index{attendance\_percentage@{attendance\_percentage}!Event@{Event}}
+\doxysubsubsection{\texorpdfstring{attendance\_percentage()}{attendance\_percentage()}}
+{\footnotesize\ttfamily double Event\+::attendance\+\_\+percentage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Calculates what pecentage of the tickets available for the event are sold. \mbox{\Hypertarget{class_event_af88bc0eb4edce2ab3d504726476e4601}\label{class_event_af88bc0eb4edce2ab3d504726476e4601}} 
+\index{Event@{Event}!operator==@{operator==}}
+\index{operator==@{operator==}!Event@{Event}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Event\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_event}{Event}} \&}]{other }\end{DoxyParamCaption}) const}
+
+Compares names, dates and hall numbers. \mbox{\Hypertarget{class_event_a0475d499c1e8d9605e640b06909ecd6c}\label{class_event_a0475d499c1e8d9605e640b06909ecd6c}} 
+\index{Event@{Event}!print\_tickets\_with\_status@{print\_tickets\_with\_status}}
+\index{print\_tickets\_with\_status@{print\_tickets\_with\_status}!Event@{Event}}
+\doxysubsubsection{\texorpdfstring{print\_tickets\_with\_status()}{print\_tickets\_with\_status()}}
+{\footnotesize\ttfamily void Event\+::print\+\_\+tickets\+\_\+with\+\_\+status (\begin{DoxyParamCaption}\item[{Ticket\+Status}]{status }\end{DoxyParamCaption}) const}
+
+Prints basic info about the event and all tickets with the given status if any. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Ticket\+Office/Event.\+h\item 
+Ticket\+Office/Event.\+cpp\end{DoxyCompactItemize}
