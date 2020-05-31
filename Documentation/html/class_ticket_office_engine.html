@@ -64,6 +64,8 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_ticket_office_engine-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">TicketOfficeEngine Class Reference</div>  </div>
@@ -84,6 +86,47 @@ Inheritance diagram for TicketOfficeEngine:</div>
   </map>
 </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:aded9fd5919b91be26023621554703659"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ticket_office_engine.html#aded9fd5919b91be26023621554703659">load</a> (std::istream &amp;) override</td></tr>
+<tr class="separator:aded9fd5919b91be26023621554703659"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2e3fe712b6d8e1fba7c88aec7b3dbc1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ticket_office_engine.html#ae2e3fe712b6d8e1fba7c88aec7b3dbc1">unload</a> () override</td></tr>
+<tr class="separator:ae2e3fe712b6d8e1fba7c88aec7b3dbc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bf6bbe68d01078c427d28b8f1687cc2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ticket_office_engine.html#a5bf6bbe68d01078c427d28b8f1687cc2">save_data</a> (std::ostream &amp;) const override</td></tr>
+<tr class="separator:a5bf6bbe68d01078c427d28b8f1687cc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb350dd643b48b59ed3e5c4dece6c237"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ticket_office_engine.html#abb350dd643b48b59ed3e5c4dece6c237">help</a> () const override</td></tr>
+<tr class="separator:abb350dd643b48b59ed3e5c4dece6c237"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ebe2637e519bc3cb32f3d1ac9334a6a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ticket_office_engine.html#a9ebe2637e519bc3cb32f3d1ac9334a6a">execute_command</a> (const std::string &amp;, const std::string &amp;) override</td></tr>
+<tr class="separator:a9ebe2637e519bc3cb32f3d1ac9334a6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf8f423ac471b8fbe9e866307b8e5536"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ticket_office_engine.html#acf8f423ac471b8fbe9e866307b8e5536">is_valid_command</a> (const std::string &amp;) const override</td></tr>
+<tr class="separator:acf8f423ac471b8fbe9e866307b8e5536"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef3ba8314cf2a8a5b295a50dd328b038"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ticket_office_engine.html#aef3ba8314cf2a8a5b295a50dd328b038">add_event</a> (const std::string &amp;)</td></tr>
+<tr class="separator:aef3ba8314cf2a8a5b295a50dd328b038"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adec56fdc5488355e122dd7f504ab0f17"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ticket_office_engine.html#adec56fdc5488355e122dd7f504ab0f17">print_freeseats</a> (const std::string &amp;) const</td></tr>
+<tr class="separator:adec56fdc5488355e122dd7f504ab0f17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abecfc27cb7bc727b5872096d3feb15ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ticket_office_engine.html#abecfc27cb7bc727b5872096d3feb15ea">book</a> (size_t, size_t, const <a class="el" href="class_date.html">Date</a> &amp;, const std::string &amp;)</td></tr>
+<tr class="separator:abecfc27cb7bc727b5872096d3feb15ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af10bb7840f894cd6fc65cfb928b6ef1f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ticket_office_engine.html#af10bb7840f894cd6fc65cfb928b6ef1f">unbook</a> (size_t, size_t, const <a class="el" href="class_date.html">Date</a> &amp;, const std::string &amp;)</td></tr>
+<tr class="separator:af10bb7840f894cd6fc65cfb928b6ef1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee5418c6c58ab9847aef064be0078ecc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ticket_office_engine.html#aee5418c6c58ab9847aef064be0078ecc">buy</a> (size_t, size_t, const <a class="el" href="class_date.html">Date</a> &amp;, const std::string &amp;)</td></tr>
+<tr class="separator:aee5418c6c58ab9847aef064be0078ecc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af299d908cd98c4847792c63635d03267"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ticket_office_engine.html#af299d908cd98c4847792c63635d03267">print_bookings</a> (const std::string &amp;) const</td></tr>
+<tr class="separator:af299d908cd98c4847792c63635d03267"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad84243df5cef1bb4ac97086a074cc7aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ticket_office_engine.html#ad84243df5cef1bb4ac97086a074cc7aa">check_code</a> (const std::string &amp;) const</td></tr>
+<tr class="separator:ad84243df5cef1bb4ac97086a074cc7aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25e761e96dab75010b26e3d8c4ef0c23"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ticket_office_engine.html#a25e761e96dab75010b26e3d8c4ef0c23">report</a> (const std::string &amp;) const</td></tr>
+<tr class="separator:a25e761e96dab75010b26e3d8c4ef0c23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a891e21b1748252da4fdfb9879cb0a93b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ticket_office_engine.html#a891e21b1748252da4fdfb9879cb0a93b">print_best</a> ()</td></tr>
+<tr class="separator:a891e21b1748252da4fdfb9879cb0a93b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78a0de9c480e5174526f8c51db8aad7e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ticket_office_engine.html#a78a0de9c480e5174526f8c51db8aad7e">print_worst</a> (const std::string &amp;)</td></tr>
+<tr class="separator:a78a0de9c480e5174526f8c51db8aad7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a907a8130f6794bff6c26bdb573388737"><td class="memItemLeft" align="right" valign="top"><a id="a907a8130f6794bff6c26bdb573388737"></a>
+<a class="el" href="class_ticket_office.html">TicketOffice</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_office</b> {}</td></tr>
+<tr class="separator:a907a8130f6794bff6c26bdb573388737"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_methods_class_engine"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_engine')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_engine.html">Engine</a></td></tr>
@@ -110,7 +153,535 @@ Status&#160;</td><td class="memItemRight" valign="bottom"><b>m_status</b> { Stat
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The class deals with user input and generates data for <a class="el" href="class_ticket_office.html" title="Stores all events and hall sizes.">TicketOffice</a> methods. </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="aef3ba8314cf2a8a5b295a50dd328b038"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef3ba8314cf2a8a5b295a50dd328b038">&#9670;&nbsp;</a></span>add_event()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TicketOfficeEngine::add_event </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>input</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Generates name, date and hall number if the input was in the correct format and passes them to <a class="el" href="class_ticket_office.html#ac51d657f5532ac1dbcb102c47cb23d2f">TicketOffice::add_event()</a>. Then prints a message if the operation was successful. </p>
+
+</div>
+</div>
+<a id="abecfc27cb7bc727b5872096d3feb15ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abecfc27cb7bc727b5872096d3feb15ea">&#9670;&nbsp;</a></span>book()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TicketOfficeEngine::book </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>seat</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_date.html">Date</a> &amp;&#160;</td>
+          <td class="paramname"><em>date</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>event_name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets a note from the user and passes the data to <a class="el" href="class_ticket_office.html#a905cb2978140bfac5bc7971f1c0c9ad1">TicketOffice::book_ticket()</a>. Finnaly, prints a message if the operation was successful. </p>
+
+</div>
+</div>
+<a id="aee5418c6c58ab9847aef064be0078ecc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee5418c6c58ab9847aef064be0078ecc">&#9670;&nbsp;</a></span>buy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TicketOfficeEngine::buy </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>seat</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_date.html">Date</a> &amp;&#160;</td>
+          <td class="paramname"><em>date</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>event_name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Invokes <a class="el" href="class_ticket_office.html#aea228a2a0189bb4578a0ba1f657b0614">TicketOffice::buy_ticket()</a> and prints a message if the operation was successful. </p>
+
+</div>
+</div>
+<a id="ad84243df5cef1bb4ac97086a074cc7aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad84243df5cef1bb4ac97086a074cc7aa">&#9670;&nbsp;</a></span>check_code()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TicketOfficeEngine::check_code </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>code_str</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Checks if the given code is in the appropriate format. If yes, invokes TicketOffice::check_code(). </p>
+
+</div>
+</div>
+<a id="a9ebe2637e519bc3cb32f3d1ac9334a6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ebe2637e519bc3cb32f3d1ac9334a6a">&#9670;&nbsp;</a></span>execute_command()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TicketOfficeEngine::execute_command </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>command</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>additional</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">private</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Checks which command has been called and invokes it. </p>
+
+<p>Implements <a class="el" href="class_engine.html">Engine</a>.</p>
+
+</div>
+</div>
+<a id="abb350dd643b48b59ed3e5c4dece6c237"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb350dd643b48b59ed3e5c4dece6c237">&#9670;&nbsp;</a></span>help()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TicketOfficeEngine::help </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">private</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gives info about the maintained functionality of the program. </p>
+
+<p>Reimplemented from <a class="el" href="class_engine.html#af1dccd371900e772afd3f392fd5f59ff">Engine</a>.</p>
+
+</div>
+</div>
+<a id="acf8f423ac471b8fbe9e866307b8e5536"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf8f423ac471b8fbe9e866307b8e5536">&#9670;&nbsp;</a></span>is_valid_command()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TicketOfficeEngine::is_valid_command </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>command</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">private</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Checks if the given command is valid. </p>
+
+<p>Implements <a class="el" href="class_engine.html">Engine</a>.</p>
+
+</div>
+</div>
+<a id="aded9fd5919b91be26023621554703659"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aded9fd5919b91be26023621554703659">&#9670;&nbsp;</a></span>load()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TicketOfficeEngine::load </td>
+          <td>(</td>
+          <td class="paramtype">std::istream &amp;&#160;</td>
+          <td class="paramname"><em>in</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">private</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Loads data for <a class="el" href="class_ticket_office.html" title="Stores all events and hall sizes.">TicketOffice</a> object from a file. </p>
+
+<p>Implements <a class="el" href="class_engine.html">Engine</a>.</p>
+
+</div>
+</div>
+<a id="a891e21b1748252da4fdfb9879cb0a93b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a891e21b1748252da4fdfb9879cb0a93b">&#9670;&nbsp;</a></span>print_best()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TicketOfficeEngine::print_best </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Invokes <a class="el" href="class_ticket_office.html#a647bb6beb8230f2f2ae0c9e604a0d41b">TicketOffice::print_most_watched_events()</a>. </p>
+
+</div>
+</div>
+<a id="af299d908cd98c4847792c63635d03267"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af299d908cd98c4847792c63635d03267">&#9670;&nbsp;</a></span>print_bookings()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TicketOfficeEngine::print_bookings </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>input</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Checks if date or name can be generated from the input and invokes <a class="el" href="class_ticket_office.html#a983cbe9186fb0dd47edc55a4667f267b">TicketOffice::print_bookings()</a>. </p>
+
+</div>
+</div>
+<a id="adec56fdc5488355e122dd7f504ab0f17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adec56fdc5488355e122dd7f504ab0f17">&#9670;&nbsp;</a></span>print_freeseats()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TicketOfficeEngine::print_freeseats </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>input</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Generates date and name from the input, if possible, and passes them to <a class="el" href="class_ticket_office.html#a931cc928eba964b0862bb089c42416c3">TicketOffice::print_free_seats()</a>. </p>
+
+</div>
+</div>
+<a id="a78a0de9c480e5174526f8c51db8aad7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78a0de9c480e5174526f8c51db8aad7e">&#9670;&nbsp;</a></span>print_worst()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TicketOfficeEngine::print_worst </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>input</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Generates two dates from the input, if possible, and passes them to <a class="el" href="class_ticket_office.html#a72210db9619c5501c833bc46fd31cd4e">TicketOffice::worst_events()</a>. </p>
+
+</div>
+</div>
+<a id="a25e761e96dab75010b26e3d8c4ef0c23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25e761e96dab75010b26e3d8c4ef0c23">&#9670;&nbsp;</a></span>report()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TicketOfficeEngine::report </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>input</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Generates two dates and hall number from the input, if possible, and passes them to <a class="el" href="class_ticket_office.html#a8c390f04d546df8bad17eaa570025eea">TicketOffice::report()</a>. </p>
+
+</div>
+</div>
+<a id="a5bf6bbe68d01078c427d28b8f1687cc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bf6bbe68d01078c427d28b8f1687cc2">&#9670;&nbsp;</a></span>save_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TicketOfficeEngine::save_data </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">private</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Saves the data from</p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">m_office</td><td>to a file. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="class_engine.html">Engine</a>.</p>
+
+</div>
+</div>
+<a id="af10bb7840f894cd6fc65cfb928b6ef1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af10bb7840f894cd6fc65cfb928b6ef1f">&#9670;&nbsp;</a></span>unbook()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TicketOfficeEngine::unbook </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>seat</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_date.html">Date</a> &amp;&#160;</td>
+          <td class="paramname"><em>date</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>event_name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Invokes <a class="el" href="class_ticket_office.html#a81a0384956c3556e8c68432dea879e36">TicketOffice::unbook_ticket()</a> prints a message if the operation was successful. </p>
+
+</div>
+</div>
+<a id="ae2e3fe712b6d8e1fba7c88aec7b3dbc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2e3fe712b6d8e1fba7c88aec7b3dbc1">&#9670;&nbsp;</a></span>unload()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TicketOfficeEngine::unload </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">private</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Unloads the content of</p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">m_office</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="class_engine.html">Engine</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>TicketOffice/<a class="el" href="_ticket_office_engine_8h_source.html">TicketOfficeEngine.h</a></li>
 <li>TicketOffice/TicketOfficeEngine.cpp</li>
 </ul>

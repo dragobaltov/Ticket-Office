@@ -43,6 +43,26 @@ void \mbox{\hyperlink{class_ticket_office_a72210db9619c5501c833bc46fd31cd4e}{wor
 \item 
 void \mbox{\hyperlink{class_ticket_office_a9b0feda0f05a0592f6451f135cc09ee0}{unload}} ()
 \end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_ticket_office_a8675b349ca3b5136ca684059cb12f909}\label{class_ticket_office_a8675b349ca3b5136ca684059cb12f909}} 
+void {\bfseries get\+\_\+worst\+\_\+events\+\_\+indexes} (std\+::vector$<$ size\+\_\+t $>$ \&, const \mbox{\hyperlink{class_date}{Date}} \&, const \mbox{\hyperlink{class_date}{Date}} \&) const
+\item 
+char \mbox{\hyperlink{class_ticket_office_aa81cbec40cc5a75653d9eb6091a1a01c}{get\+\_\+answer}} (const std\+::string \&) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_ticket_office_a74522e8f95ac7a2695d7d29c513f0595}\label{class_ticket_office_a74522e8f95ac7a2695d7d29c513f0595}} 
+std\+::vector$<$ \mbox{\hyperlink{class_event}{Event}} $>$ {\bfseries m\+\_\+events} \{\}
+\item 
+\mbox{\Hypertarget{class_ticket_office_a6b710dfdcc9f0ec7d85536da47520049}\label{class_ticket_office_a6b710dfdcc9f0ec7d85536da47520049}} 
+std\+::vector$<$ std\+::pair$<$ size\+\_\+t, size\+\_\+t $>$ $>$ {\bfseries m\+\_\+halls\+\_\+sizes} \{\}
+\item 
+\mbox{\Hypertarget{class_ticket_office_a8c1d89916f0271169e3674e78845c439}\label{class_ticket_office_a8c1d89916f0271169e3674e78845c439}} 
+\mbox{\hyperlink{class_code_generator}{Code\+Generator}} {\bfseries m\+\_\+gen} \{\}
+\end{DoxyCompactItemize}
 \doxysubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
@@ -71,13 +91,19 @@ Adds an event if it is not already scheduled for the given date and if the given
 \doxysubsubsection{\texorpdfstring{book\_ticket()}{book\_ticket()}}
 {\footnotesize\ttfamily bool Ticket\+Office\+::book\+\_\+ticket (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{date,  }\item[{const std\+::string \&}]{name,  }\item[{size\+\_\+t}]{row,  }\item[{size\+\_\+t}]{seat,  }\item[{const std\+::string \&}]{note }\end{DoxyParamCaption})}
 
-Invokes book\+\_\+ticket method of \mbox{\hyperlink{class_event}{Event}} if there is an event with the same date and name. \mbox{\Hypertarget{class_ticket_office_aea228a2a0189bb4578a0ba1f657b0614}\label{class_ticket_office_aea228a2a0189bb4578a0ba1f657b0614}} 
+Invokes Event\+::book\+\_\+ticket() if there is an event with the same date and name. \mbox{\Hypertarget{class_ticket_office_aea228a2a0189bb4578a0ba1f657b0614}\label{class_ticket_office_aea228a2a0189bb4578a0ba1f657b0614}} 
 \index{TicketOffice@{TicketOffice}!buy\_ticket@{buy\_ticket}}
 \index{buy\_ticket@{buy\_ticket}!TicketOffice@{TicketOffice}}
 \doxysubsubsection{\texorpdfstring{buy\_ticket()}{buy\_ticket()}}
 {\footnotesize\ttfamily bool Ticket\+Office\+::buy\+\_\+ticket (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{date,  }\item[{const std\+::string \&}]{name,  }\item[{size\+\_\+t}]{row,  }\item[{size\+\_\+t}]{seat }\end{DoxyParamCaption})}
 
-Invokes buy\+\_\+ticket method of \mbox{\hyperlink{class_event}{Event}} if there is an event with the same date and name. \mbox{\Hypertarget{class_ticket_office_a983cbe9186fb0dd47edc55a4667f267b}\label{class_ticket_office_a983cbe9186fb0dd47edc55a4667f267b}} 
+Invokes Event\+::buy\+\_\+ticket() if there is an event with the same date and name. \mbox{\Hypertarget{class_ticket_office_aa81cbec40cc5a75653d9eb6091a1a01c}\label{class_ticket_office_aa81cbec40cc5a75653d9eb6091a1a01c}} 
+\index{TicketOffice@{TicketOffice}!get\_answer@{get\_answer}}
+\index{get\_answer@{get\_answer}!TicketOffice@{TicketOffice}}
+\doxysubsubsection{\texorpdfstring{get\_answer()}{get\_answer()}}
+{\footnotesize\ttfamily char Ticket\+Office\+::get\+\_\+answer (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{question }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+Gets yes or no answer from the user to the given question. \mbox{\Hypertarget{class_ticket_office_a983cbe9186fb0dd47edc55a4667f267b}\label{class_ticket_office_a983cbe9186fb0dd47edc55a4667f267b}} 
 \index{TicketOffice@{TicketOffice}!print\_bookings@{print\_bookings}}
 \index{print\_bookings@{print\_bookings}!TicketOffice@{TicketOffice}}
 \doxysubsubsection{\texorpdfstring{print\_bookings()}{print\_bookings()}}
@@ -122,7 +148,7 @@ Sets the generator by the last used code. \mbox{\Hypertarget{class_ticket_office
 \doxysubsubsection{\texorpdfstring{unbook\_ticket()}{unbook\_ticket()}}
 {\footnotesize\ttfamily bool Ticket\+Office\+::unbook\+\_\+ticket (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{date,  }\item[{const std\+::string \&}]{name,  }\item[{size\+\_\+t}]{row,  }\item[{size\+\_\+t}]{seat }\end{DoxyParamCaption})}
 
-Invokes unbook\+\_\+ticket method of \mbox{\hyperlink{class_event}{Event}} if there is an event with the same date and name. \mbox{\Hypertarget{class_ticket_office_a9b0feda0f05a0592f6451f135cc09ee0}\label{class_ticket_office_a9b0feda0f05a0592f6451f135cc09ee0}} 
+Invokes Event\+::unbook\+\_\+ticket() if there is an event with the same date and name. \mbox{\Hypertarget{class_ticket_office_a9b0feda0f05a0592f6451f135cc09ee0}\label{class_ticket_office_a9b0feda0f05a0592f6451f135cc09ee0}} 
 \index{TicketOffice@{TicketOffice}!unload@{unload}}
 \index{unload@{unload}!TicketOffice@{TicketOffice}}
 \doxysubsubsection{\texorpdfstring{unload()}{unload()}}

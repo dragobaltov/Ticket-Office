@@ -68,6 +68,7 @@ $(function() {
 <h3><a id="index_a"></a>- a -</h3><ul>
 <li>add_event()
 : <a class="el" href="class_ticket_office.html#ac51d657f5532ac1dbcb102c47cb23d2f">TicketOffice</a>
+, <a class="el" href="class_ticket_office_engine.html#aef3ba8314cf2a8a5b295a50dd328b038">TicketOfficeEngine</a>
 </li>
 <li>are_overlapping()
 : <a class="el" href="class_event.html#a2de576d59f74c6594974cab03384e2c2">Event</a>
@@ -82,8 +83,14 @@ $(function() {
 
 
 <h3><a id="index_b"></a>- b -</h3><ul>
+<li>book()
+: <a class="el" href="class_ticket_office_engine.html#abecfc27cb7bc727b5872096d3feb15ea">TicketOfficeEngine</a>
+</li>
 <li>book_ticket()
 : <a class="el" href="class_ticket_office.html#a905cb2978140bfac5bc7971f1c0c9ad1">TicketOffice</a>
+</li>
+<li>buy()
+: <a class="el" href="class_ticket_office_engine.html#aee5418c6c58ab9847aef064be0078ecc">TicketOfficeEngine</a>
 </li>
 <li>buy_ticket()
 : <a class="el" href="class_ticket_office.html#aea228a2a0189bb4578a0ba1f657b0614">TicketOffice</a>
@@ -97,6 +104,7 @@ $(function() {
 </li>
 <li>check_code()
 : <a class="el" href="class_hall.html#a6e5af5a5abbb95591111591271c9df17">Hall</a>
+, <a class="el" href="class_ticket_office_engine.html#ad84243df5cef1bb4ac97086a074cc7aa">TicketOfficeEngine</a>
 </li>
 <li>close()
 : <a class="el" href="class_engine.html#a6f00047153c2581a74c7c1912bfe5f36">Engine</a>
@@ -117,10 +125,16 @@ $(function() {
 <li>Date()
 : <a class="el" href="class_date.html#aab4cb9b61d7810de427e55b297689297">Date</a>
 </li>
+<li>decypher_code()
+: <a class="el" href="class_code.html#ad4590146543d9559fa987540f9d54927">Code</a>
+</li>
 </ul>
 
 
 <h3><a id="index_e"></a>- e -</h3><ul>
+<li>execute_command()
+: <a class="el" href="class_ticket_office_engine.html#a9ebe2637e519bc3cb32f3d1ac9334a6a">TicketOfficeEngine</a>
+</li>
 <li>exit()
 : <a class="el" href="class_engine.html#affdeea869ca053401295ef938b5277fa">Engine</a>
 </li>
@@ -130,6 +144,9 @@ $(function() {
 <h3><a id="index_g"></a>- g -</h3><ul>
 <li>generate()
 : <a class="el" href="class_code_generator.html#ab9599f9b0a00fc08f842dd0d765222bb">CodeGenerator</a>
+</li>
+<li>get_answer()
+: <a class="el" href="class_ticket_office.html#aa81cbec40cc5a75653d9eb6091a1a01c">TicketOffice</a>
 </li>
 <li>get_sold_places_count()
 : <a class="el" href="class_hall.html#adcf57ae7a48f20d78baac7adf2fbea1b">Hall</a>
@@ -143,6 +160,21 @@ $(function() {
 </li>
 <li>help()
 : <a class="el" href="class_engine.html#af1dccd371900e772afd3f392fd5f59ff">Engine</a>
+, <a class="el" href="class_ticket_office_engine.html#abb350dd643b48b59ed3e5c4dece6c237">TicketOfficeEngine</a>
+</li>
+</ul>
+
+
+<h3><a id="index_i"></a>- i -</h3><ul>
+<li>is_valid_command()
+: <a class="el" href="class_ticket_office_engine.html#acf8f423ac471b8fbe9e866307b8e5536">TicketOfficeEngine</a>
+</li>
+</ul>
+
+
+<h3><a id="index_l"></a>- l -</h3><ul>
+<li>load()
+: <a class="el" href="class_ticket_office_engine.html#aded9fd5919b91be26023621554703659">TicketOfficeEngine</a>
 </li>
 </ul>
 
@@ -165,11 +197,18 @@ $(function() {
 <li>place_is_valid()
 : <a class="el" href="class_hall.html#a338267425635344af8acc989d5e3b456">Hall</a>
 </li>
+<li>print_best()
+: <a class="el" href="class_ticket_office_engine.html#a891e21b1748252da4fdfb9879cb0a93b">TicketOfficeEngine</a>
+</li>
 <li>print_bookings()
 : <a class="el" href="class_ticket_office.html#a983cbe9186fb0dd47edc55a4667f267b">TicketOffice</a>
+, <a class="el" href="class_ticket_office_engine.html#af299d908cd98c4847792c63635d03267">TicketOfficeEngine</a>
 </li>
 <li>print_free_seats()
 : <a class="el" href="class_ticket_office.html#a931cc928eba964b0862bb089c42416c3">TicketOffice</a>
+</li>
+<li>print_freeseats()
+: <a class="el" href="class_ticket_office_engine.html#adec56fdc5488355e122dd7f504ab0f17">TicketOfficeEngine</a>
 </li>
 <li>print_most_watched_events()
 : <a class="el" href="class_ticket_office.html#a647bb6beb8230f2f2ae0c9e604a0d41b">TicketOffice</a>
@@ -178,12 +217,16 @@ $(function() {
 : <a class="el" href="class_event.html#a0475d499c1e8d9605e640b06909ecd6c">Event</a>
 , <a class="el" href="class_hall.html#aac0ade05d74b7d1c9ad2575a3ded6c6e">Hall</a>
 </li>
+<li>print_worst()
+: <a class="el" href="class_ticket_office_engine.html#a78a0de9c480e5174526f8c51db8aad7e">TicketOfficeEngine</a>
+</li>
 </ul>
 
 
 <h3><a id="index_r"></a>- r -</h3><ul>
 <li>report()
 : <a class="el" href="class_ticket_office.html#a8c390f04d546df8bad17eaa570025eea">TicketOffice</a>
+, <a class="el" href="class_ticket_office_engine.html#a25e761e96dab75010b26e3d8c4ef0c23">TicketOfficeEngine</a>
 </li>
 <li>run()
 : <a class="el" href="class_engine.html#a1a210cf30d6bd330b3649439ecd6d6cc">Engine</a>
@@ -195,6 +238,9 @@ $(function() {
 <li>save_as()
 : <a class="el" href="class_engine.html#ac3a90bda815333f961aaf526a739c063">Engine</a>
 </li>
+<li>save_data()
+: <a class="el" href="class_ticket_office_engine.html#a5bf6bbe68d01078c427d28b8f1687cc2">TicketOfficeEngine</a>
+</li>
 <li>set_day()
 : <a class="el" href="class_date.html#a00a498253932488cb4edf3397db01ddc">Date</a>
 </li>
@@ -205,11 +251,15 @@ $(function() {
 
 
 <h3><a id="index_u"></a>- u -</h3><ul>
+<li>unbook()
+: <a class="el" href="class_ticket_office_engine.html#af10bb7840f894cd6fc65cfb928b6ef1f">TicketOfficeEngine</a>
+</li>
 <li>unbook_ticket()
 : <a class="el" href="class_ticket_office.html#a81a0384956c3556e8c68432dea879e36">TicketOffice</a>
 </li>
 <li>unload()
 : <a class="el" href="class_ticket_office.html#a9b0feda0f05a0592f6451f135cc09ee0">TicketOffice</a>
+, <a class="el" href="class_ticket_office_engine.html#ae2e3fe712b6d8e1fba7c88aec7b3dbc1">TicketOfficeEngine</a>
 </li>
 </ul>
 

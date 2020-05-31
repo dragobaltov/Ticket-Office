@@ -15,11 +15,185 @@ Inheritance diagram for Ticket\+Office\+Engine\+:\begin{figure}[H]
 \includegraphics[height=2.000000cm]{class_ticket_office_engine}
 \end{center}
 \end{figure}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_ticket_office_engine_aded9fd5919b91be26023621554703659}{load}} (std\+::istream \&) override
+\item 
+void \mbox{\hyperlink{class_ticket_office_engine_ae2e3fe712b6d8e1fba7c88aec7b3dbc1}{unload}} () override
+\item 
+void \mbox{\hyperlink{class_ticket_office_engine_a5bf6bbe68d01078c427d28b8f1687cc2}{save\+\_\+data}} (std\+::ostream \&) const override
+\item 
+void \mbox{\hyperlink{class_ticket_office_engine_abb350dd643b48b59ed3e5c4dece6c237}{help}} () const override
+\item 
+void \mbox{\hyperlink{class_ticket_office_engine_a9ebe2637e519bc3cb32f3d1ac9334a6a}{execute\+\_\+command}} (const std\+::string \&, const std\+::string \&) override
+\item 
+bool \mbox{\hyperlink{class_ticket_office_engine_acf8f423ac471b8fbe9e866307b8e5536}{is\+\_\+valid\+\_\+command}} (const std\+::string \&) const override
+\item 
+void \mbox{\hyperlink{class_ticket_office_engine_aef3ba8314cf2a8a5b295a50dd328b038}{add\+\_\+event}} (const std\+::string \&)
+\item 
+void \mbox{\hyperlink{class_ticket_office_engine_adec56fdc5488355e122dd7f504ab0f17}{print\+\_\+freeseats}} (const std\+::string \&) const
+\item 
+void \mbox{\hyperlink{class_ticket_office_engine_abecfc27cb7bc727b5872096d3feb15ea}{book}} (size\+\_\+t, size\+\_\+t, const \mbox{\hyperlink{class_date}{Date}} \&, const std\+::string \&)
+\item 
+void \mbox{\hyperlink{class_ticket_office_engine_af10bb7840f894cd6fc65cfb928b6ef1f}{unbook}} (size\+\_\+t, size\+\_\+t, const \mbox{\hyperlink{class_date}{Date}} \&, const std\+::string \&)
+\item 
+void \mbox{\hyperlink{class_ticket_office_engine_aee5418c6c58ab9847aef064be0078ecc}{buy}} (size\+\_\+t, size\+\_\+t, const \mbox{\hyperlink{class_date}{Date}} \&, const std\+::string \&)
+\item 
+void \mbox{\hyperlink{class_ticket_office_engine_af299d908cd98c4847792c63635d03267}{print\+\_\+bookings}} (const std\+::string \&) const
+\item 
+void \mbox{\hyperlink{class_ticket_office_engine_ad84243df5cef1bb4ac97086a074cc7aa}{check\+\_\+code}} (const std\+::string \&) const
+\item 
+void \mbox{\hyperlink{class_ticket_office_engine_a25e761e96dab75010b26e3d8c4ef0c23}{report}} (const std\+::string \&) const
+\item 
+void \mbox{\hyperlink{class_ticket_office_engine_a891e21b1748252da4fdfb9879cb0a93b}{print\+\_\+best}} ()
+\item 
+void \mbox{\hyperlink{class_ticket_office_engine_a78a0de9c480e5174526f8c51db8aad7e}{print\+\_\+worst}} (const std\+::string \&)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_ticket_office_engine_a907a8130f6794bff6c26bdb573388737}\label{class_ticket_office_engine_a907a8130f6794bff6c26bdb573388737}} 
+\mbox{\hyperlink{class_ticket_office}{Ticket\+Office}} {\bfseries m\+\_\+office} \{\}
+\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
 
 \doxysubsection{Detailed Description}
 The class deals with user input and generates data for \mbox{\hyperlink{class_ticket_office}{Ticket\+Office}} methods. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_ticket_office_engine_aef3ba8314cf2a8a5b295a50dd328b038}\label{class_ticket_office_engine_aef3ba8314cf2a8a5b295a50dd328b038}} 
+\index{TicketOfficeEngine@{TicketOfficeEngine}!add\_event@{add\_event}}
+\index{add\_event@{add\_event}!TicketOfficeEngine@{TicketOfficeEngine}}
+\doxysubsubsection{\texorpdfstring{add\_event()}{add\_event()}}
+{\footnotesize\ttfamily void Ticket\+Office\+Engine\+::add\+\_\+event (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Generates name, date and hall number if the input was in the correct format and passes them to \mbox{\hyperlink{class_ticket_office_ac51d657f5532ac1dbcb102c47cb23d2f}{Ticket\+Office\+::add\+\_\+event()}}. Then prints a message if the operation was successful. \mbox{\Hypertarget{class_ticket_office_engine_abecfc27cb7bc727b5872096d3feb15ea}\label{class_ticket_office_engine_abecfc27cb7bc727b5872096d3feb15ea}} 
+\index{TicketOfficeEngine@{TicketOfficeEngine}!book@{book}}
+\index{book@{book}!TicketOfficeEngine@{TicketOfficeEngine}}
+\doxysubsubsection{\texorpdfstring{book()}{book()}}
+{\footnotesize\ttfamily void Ticket\+Office\+Engine\+::book (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{row,  }\item[{size\+\_\+t}]{seat,  }\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{date,  }\item[{const std\+::string \&}]{event\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Gets a note from the user and passes the data to \mbox{\hyperlink{class_ticket_office_a905cb2978140bfac5bc7971f1c0c9ad1}{Ticket\+Office\+::book\+\_\+ticket()}}. Finnaly, prints a message if the operation was successful. \mbox{\Hypertarget{class_ticket_office_engine_aee5418c6c58ab9847aef064be0078ecc}\label{class_ticket_office_engine_aee5418c6c58ab9847aef064be0078ecc}} 
+\index{TicketOfficeEngine@{TicketOfficeEngine}!buy@{buy}}
+\index{buy@{buy}!TicketOfficeEngine@{TicketOfficeEngine}}
+\doxysubsubsection{\texorpdfstring{buy()}{buy()}}
+{\footnotesize\ttfamily void Ticket\+Office\+Engine\+::buy (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{row,  }\item[{size\+\_\+t}]{seat,  }\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{date,  }\item[{const std\+::string \&}]{event\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Invokes \mbox{\hyperlink{class_ticket_office_aea228a2a0189bb4578a0ba1f657b0614}{Ticket\+Office\+::buy\+\_\+ticket()}} and prints a message if the operation was successful. \mbox{\Hypertarget{class_ticket_office_engine_ad84243df5cef1bb4ac97086a074cc7aa}\label{class_ticket_office_engine_ad84243df5cef1bb4ac97086a074cc7aa}} 
+\index{TicketOfficeEngine@{TicketOfficeEngine}!check\_code@{check\_code}}
+\index{check\_code@{check\_code}!TicketOfficeEngine@{TicketOfficeEngine}}
+\doxysubsubsection{\texorpdfstring{check\_code()}{check\_code()}}
+{\footnotesize\ttfamily void Ticket\+Office\+Engine\+::check\+\_\+code (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{code\+\_\+str }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+Checks if the given code is in the appropriate format. If yes, invokes Ticket\+Office\+::check\+\_\+code(). \mbox{\Hypertarget{class_ticket_office_engine_a9ebe2637e519bc3cb32f3d1ac9334a6a}\label{class_ticket_office_engine_a9ebe2637e519bc3cb32f3d1ac9334a6a}} 
+\index{TicketOfficeEngine@{TicketOfficeEngine}!execute\_command@{execute\_command}}
+\index{execute\_command@{execute\_command}!TicketOfficeEngine@{TicketOfficeEngine}}
+\doxysubsubsection{\texorpdfstring{execute\_command()}{execute\_command()}}
+{\footnotesize\ttfamily void Ticket\+Office\+Engine\+::execute\+\_\+command (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{command,  }\item[{const std\+::string \&}]{additional }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+Checks which command has been called and invokes it. 
+
+Implements \mbox{\hyperlink{class_engine}{Engine}}.
+
+\mbox{\Hypertarget{class_ticket_office_engine_abb350dd643b48b59ed3e5c4dece6c237}\label{class_ticket_office_engine_abb350dd643b48b59ed3e5c4dece6c237}} 
+\index{TicketOfficeEngine@{TicketOfficeEngine}!help@{help}}
+\index{help@{help}!TicketOfficeEngine@{TicketOfficeEngine}}
+\doxysubsubsection{\texorpdfstring{help()}{help()}}
+{\footnotesize\ttfamily void Ticket\+Office\+Engine\+::help (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+Gives info about the maintained functionality of the program. 
+
+Reimplemented from \mbox{\hyperlink{class_engine_af1dccd371900e772afd3f392fd5f59ff}{Engine}}.
+
+\mbox{\Hypertarget{class_ticket_office_engine_acf8f423ac471b8fbe9e866307b8e5536}\label{class_ticket_office_engine_acf8f423ac471b8fbe9e866307b8e5536}} 
+\index{TicketOfficeEngine@{TicketOfficeEngine}!is\_valid\_command@{is\_valid\_command}}
+\index{is\_valid\_command@{is\_valid\_command}!TicketOfficeEngine@{TicketOfficeEngine}}
+\doxysubsubsection{\texorpdfstring{is\_valid\_command()}{is\_valid\_command()}}
+{\footnotesize\ttfamily bool Ticket\+Office\+Engine\+::is\+\_\+valid\+\_\+command (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{command }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+Checks if the given command is valid. 
+
+Implements \mbox{\hyperlink{class_engine}{Engine}}.
+
+\mbox{\Hypertarget{class_ticket_office_engine_aded9fd5919b91be26023621554703659}\label{class_ticket_office_engine_aded9fd5919b91be26023621554703659}} 
+\index{TicketOfficeEngine@{TicketOfficeEngine}!load@{load}}
+\index{load@{load}!TicketOfficeEngine@{TicketOfficeEngine}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily void Ticket\+Office\+Engine\+::load (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{in }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+Loads data for \mbox{\hyperlink{class_ticket_office}{Ticket\+Office}} object from a file. 
+
+Implements \mbox{\hyperlink{class_engine}{Engine}}.
+
+\mbox{\Hypertarget{class_ticket_office_engine_a891e21b1748252da4fdfb9879cb0a93b}\label{class_ticket_office_engine_a891e21b1748252da4fdfb9879cb0a93b}} 
+\index{TicketOfficeEngine@{TicketOfficeEngine}!print\_best@{print\_best}}
+\index{print\_best@{print\_best}!TicketOfficeEngine@{TicketOfficeEngine}}
+\doxysubsubsection{\texorpdfstring{print\_best()}{print\_best()}}
+{\footnotesize\ttfamily void Ticket\+Office\+Engine\+::print\+\_\+best (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Invokes \mbox{\hyperlink{class_ticket_office_a647bb6beb8230f2f2ae0c9e604a0d41b}{Ticket\+Office\+::print\+\_\+most\+\_\+watched\+\_\+events()}}. \mbox{\Hypertarget{class_ticket_office_engine_af299d908cd98c4847792c63635d03267}\label{class_ticket_office_engine_af299d908cd98c4847792c63635d03267}} 
+\index{TicketOfficeEngine@{TicketOfficeEngine}!print\_bookings@{print\_bookings}}
+\index{print\_bookings@{print\_bookings}!TicketOfficeEngine@{TicketOfficeEngine}}
+\doxysubsubsection{\texorpdfstring{print\_bookings()}{print\_bookings()}}
+{\footnotesize\ttfamily void Ticket\+Office\+Engine\+::print\+\_\+bookings (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{input }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+Checks if date or name can be generated from the input and invokes \mbox{\hyperlink{class_ticket_office_a983cbe9186fb0dd47edc55a4667f267b}{Ticket\+Office\+::print\+\_\+bookings()}}. \mbox{\Hypertarget{class_ticket_office_engine_adec56fdc5488355e122dd7f504ab0f17}\label{class_ticket_office_engine_adec56fdc5488355e122dd7f504ab0f17}} 
+\index{TicketOfficeEngine@{TicketOfficeEngine}!print\_freeseats@{print\_freeseats}}
+\index{print\_freeseats@{print\_freeseats}!TicketOfficeEngine@{TicketOfficeEngine}}
+\doxysubsubsection{\texorpdfstring{print\_freeseats()}{print\_freeseats()}}
+{\footnotesize\ttfamily void Ticket\+Office\+Engine\+::print\+\_\+freeseats (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{input }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+Generates date and name from the input, if possible, and passes them to \mbox{\hyperlink{class_ticket_office_a931cc928eba964b0862bb089c42416c3}{Ticket\+Office\+::print\+\_\+free\+\_\+seats()}}. \mbox{\Hypertarget{class_ticket_office_engine_a78a0de9c480e5174526f8c51db8aad7e}\label{class_ticket_office_engine_a78a0de9c480e5174526f8c51db8aad7e}} 
+\index{TicketOfficeEngine@{TicketOfficeEngine}!print\_worst@{print\_worst}}
+\index{print\_worst@{print\_worst}!TicketOfficeEngine@{TicketOfficeEngine}}
+\doxysubsubsection{\texorpdfstring{print\_worst()}{print\_worst()}}
+{\footnotesize\ttfamily void Ticket\+Office\+Engine\+::print\+\_\+worst (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Generates two dates from the input, if possible, and passes them to \mbox{\hyperlink{class_ticket_office_a72210db9619c5501c833bc46fd31cd4e}{Ticket\+Office\+::worst\+\_\+events()}}. \mbox{\Hypertarget{class_ticket_office_engine_a25e761e96dab75010b26e3d8c4ef0c23}\label{class_ticket_office_engine_a25e761e96dab75010b26e3d8c4ef0c23}} 
+\index{TicketOfficeEngine@{TicketOfficeEngine}!report@{report}}
+\index{report@{report}!TicketOfficeEngine@{TicketOfficeEngine}}
+\doxysubsubsection{\texorpdfstring{report()}{report()}}
+{\footnotesize\ttfamily void Ticket\+Office\+Engine\+::report (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{input }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+Generates two dates and hall number from the input, if possible, and passes them to \mbox{\hyperlink{class_ticket_office_a8c390f04d546df8bad17eaa570025eea}{Ticket\+Office\+::report()}}. \mbox{\Hypertarget{class_ticket_office_engine_a5bf6bbe68d01078c427d28b8f1687cc2}\label{class_ticket_office_engine_a5bf6bbe68d01078c427d28b8f1687cc2}} 
+\index{TicketOfficeEngine@{TicketOfficeEngine}!save\_data@{save\_data}}
+\index{save\_data@{save\_data}!TicketOfficeEngine@{TicketOfficeEngine}}
+\doxysubsubsection{\texorpdfstring{save\_data()}{save\_data()}}
+{\footnotesize\ttfamily void Ticket\+Office\+Engine\+::save\+\_\+data (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+Saves the data from
+\begin{DoxyParams}{Parameters}
+{\em m\+\_\+office} & to a file. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_engine}{Engine}}.
+
+\mbox{\Hypertarget{class_ticket_office_engine_af10bb7840f894cd6fc65cfb928b6ef1f}\label{class_ticket_office_engine_af10bb7840f894cd6fc65cfb928b6ef1f}} 
+\index{TicketOfficeEngine@{TicketOfficeEngine}!unbook@{unbook}}
+\index{unbook@{unbook}!TicketOfficeEngine@{TicketOfficeEngine}}
+\doxysubsubsection{\texorpdfstring{unbook()}{unbook()}}
+{\footnotesize\ttfamily void Ticket\+Office\+Engine\+::unbook (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{row,  }\item[{size\+\_\+t}]{seat,  }\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{date,  }\item[{const std\+::string \&}]{event\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Invokes \mbox{\hyperlink{class_ticket_office_a81a0384956c3556e8c68432dea879e36}{Ticket\+Office\+::unbook\+\_\+ticket()}} prints a message if the operation was successful. \mbox{\Hypertarget{class_ticket_office_engine_ae2e3fe712b6d8e1fba7c88aec7b3dbc1}\label{class_ticket_office_engine_ae2e3fe712b6d8e1fba7c88aec7b3dbc1}} 
+\index{TicketOfficeEngine@{TicketOfficeEngine}!unload@{unload}}
+\index{unload@{unload}!TicketOfficeEngine@{TicketOfficeEngine}}
+\doxysubsubsection{\texorpdfstring{unload()}{unload()}}
+{\footnotesize\ttfamily void Ticket\+Office\+Engine\+::unload (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+Unloads the content of
+\begin{DoxyParams}{Parameters}
+{\em m\+\_\+office} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_engine}{Engine}}.
+
+
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

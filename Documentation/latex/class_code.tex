@@ -35,6 +35,38 @@ void {\bfseries print\+\_\+place} () const
 \mbox{\Hypertarget{class_code_a2517fc92b9202a1ac3cb352cfcaae433}\label{class_code_a2517fc92b9202a1ac3cb352cfcaae433}} 
 bool {\bfseries operator==} (const \mbox{\hyperlink{class_code}{Code}} \&) const
 \end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_code_ad4590146543d9559fa987540f9d54927}{decypher\+\_\+code}} (const std\+::string \&)
+\item 
+\mbox{\Hypertarget{class_code_aec88c47bffe6a9efec026b8d373fd2ef}\label{class_code_aec88c47bffe6a9efec026b8d373fd2ef}} 
+size\+\_\+t {\bfseries get\+\_\+num} (const std\+::string \&, size\+\_\+t \&) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_code_ad818cc3c8c8c512e7977333ea6ce9e41}\label{class_code_ad818cc3c8c8c512e7977333ea6ce9e41}} 
+size\+\_\+t {\bfseries m\+\_\+hall\+\_\+num} \{0\}
+\item 
+\mbox{\Hypertarget{class_code_a82b79e1cf1d269ec41802e41b1cd7fe9}\label{class_code_a82b79e1cf1d269ec41802e41b1cd7fe9}} 
+size\+\_\+t {\bfseries m\+\_\+row} \{0\}
+\item 
+\mbox{\Hypertarget{class_code_a6ce7bdbade4ff16b19d39ae483546d40}\label{class_code_a6ce7bdbade4ff16b19d39ae483546d40}} 
+size\+\_\+t {\bfseries m\+\_\+seat} \{0\}
+\item 
+\mbox{\Hypertarget{class_code_aa6b4597ee8ab4170e8f3fb10d41f8723}\label{class_code_aa6b4597ee8ab4170e8f3fb10d41f8723}} 
+char {\bfseries m\+\_\+first} \{\textquotesingle{} \textquotesingle{}\}
+\item 
+\mbox{\Hypertarget{class_code_ab514610e53bb38ed14b91088f6ce662e}\label{class_code_ab514610e53bb38ed14b91088f6ce662e}} 
+char {\bfseries m\+\_\+second} \{\textquotesingle{} \textquotesingle{}\}
+\item 
+\mbox{\Hypertarget{class_code_a678a7795ab1008ebb1cd9af319e97312}\label{class_code_a678a7795ab1008ebb1cd9af319e97312}} 
+char {\bfseries m\+\_\+third} \{\textquotesingle{} \textquotesingle{}\}
+\item 
+\mbox{\Hypertarget{class_code_a5fb9f568253dfd2f8550e6bc1641b68a}\label{class_code_a5fb9f568253dfd2f8550e6bc1641b68a}} 
+char {\bfseries m\+\_\+forth} \{\textquotesingle{} \textquotesingle{}\}
+\end{DoxyCompactItemize}
 \doxysubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
@@ -63,6 +95,15 @@ The class represents the code, which a ticket recieves when it\textquotesingle{}
 {\footnotesize\ttfamily Code\+::\+Code (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str\+\_\+code }\end{DoxyParamCaption})}
 
 The constructor enables direct parsing from string to \mbox{\hyperlink{class_code}{Code}}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_code_ad4590146543d9559fa987540f9d54927}\label{class_code_ad4590146543d9559fa987540f9d54927}} 
+\index{Code@{Code}!decypher\_code@{decypher\_code}}
+\index{decypher\_code@{decypher\_code}!Code@{Code}}
+\doxysubsubsection{\texorpdfstring{decypher\_code()}{decypher\_code()}}
+{\footnotesize\ttfamily void Code\+::decypher\+\_\+code (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str\+\_\+code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Parses string to \mbox{\hyperlink{class_code}{Code}} 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

@@ -75,7 +75,7 @@ void TicketOffice::print_free_seats(const Date & date, const std::string & name)
 	}
 }
 
-/*! Invokes book_ticket method of Event if there is an event with the same date and name.*/
+/*! Invokes Event::book_ticket() if there is an event with the same date and name.*/
 bool TicketOffice::book_ticket(const Date & date, const std::string & name, size_t row, size_t seat, const std::string& note)
 {
 	for (size_t i = 0; i < m_events.size(); ++i)
@@ -89,7 +89,7 @@ bool TicketOffice::book_ticket(const Date & date, const std::string & name, size
 	return false;
 }
 
-/*! Invokes unbook_ticket method of Event if there is an event with the same date and name.*/
+/*! Invokes Event::unbook_ticket() if there is an event with the same date and name.*/
 bool TicketOffice::unbook_ticket(const Date & date, const std::string & name, size_t row, size_t seat)
 {
 	for (size_t i = 0; i < m_events.size(); ++i)
@@ -103,7 +103,7 @@ bool TicketOffice::unbook_ticket(const Date & date, const std::string & name, si
 	return false;
 }
 
-/*! Invokes buy_ticket method of Event if there is an event with the same date and name.*/
+/*! Invokes Event::buy_ticket() if there is an event with the same date and name.*/
 bool TicketOffice::buy_ticket(const Date & date, const std::string & name, size_t row, size_t seat)
 {
 	for (size_t i = 0; i < m_events.size(); ++i)

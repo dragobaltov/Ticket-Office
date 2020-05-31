@@ -65,6 +65,8 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="class_code-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -103,6 +105,38 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>print_place</b> () co
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="class_code.html">Code</a> &amp;) const</td></tr>
 <tr class="separator:a2517fc92b9202a1ac3cb352cfcaae433"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:ad4590146543d9559fa987540f9d54927"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_code.html#ad4590146543d9559fa987540f9d54927">decypher_code</a> (const std::string &amp;)</td></tr>
+<tr class="separator:ad4590146543d9559fa987540f9d54927"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec88c47bffe6a9efec026b8d373fd2ef"><td class="memItemLeft" align="right" valign="top"><a id="aec88c47bffe6a9efec026b8d373fd2ef"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>get_num</b> (const std::string &amp;, size_t &amp;) const</td></tr>
+<tr class="separator:aec88c47bffe6a9efec026b8d373fd2ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:ad818cc3c8c8c512e7977333ea6ce9e41"><td class="memItemLeft" align="right" valign="top"><a id="ad818cc3c8c8c512e7977333ea6ce9e41"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>m_hall_num</b> {0}</td></tr>
+<tr class="separator:ad818cc3c8c8c512e7977333ea6ce9e41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82b79e1cf1d269ec41802e41b1cd7fe9"><td class="memItemLeft" align="right" valign="top"><a id="a82b79e1cf1d269ec41802e41b1cd7fe9"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>m_row</b> {0}</td></tr>
+<tr class="separator:a82b79e1cf1d269ec41802e41b1cd7fe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ce7bdbade4ff16b19d39ae483546d40"><td class="memItemLeft" align="right" valign="top"><a id="a6ce7bdbade4ff16b19d39ae483546d40"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>m_seat</b> {0}</td></tr>
+<tr class="separator:a6ce7bdbade4ff16b19d39ae483546d40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6b4597ee8ab4170e8f3fb10d41f8723"><td class="memItemLeft" align="right" valign="top"><a id="aa6b4597ee8ab4170e8f3fb10d41f8723"></a>
+char&#160;</td><td class="memItemRight" valign="bottom"><b>m_first</b> {' '}</td></tr>
+<tr class="separator:aa6b4597ee8ab4170e8f3fb10d41f8723"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab514610e53bb38ed14b91088f6ce662e"><td class="memItemLeft" align="right" valign="top"><a id="ab514610e53bb38ed14b91088f6ce662e"></a>
+char&#160;</td><td class="memItemRight" valign="bottom"><b>m_second</b> {' '}</td></tr>
+<tr class="separator:ab514610e53bb38ed14b91088f6ce662e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a678a7795ab1008ebb1cd9af319e97312"><td class="memItemLeft" align="right" valign="top"><a id="a678a7795ab1008ebb1cd9af319e97312"></a>
+char&#160;</td><td class="memItemRight" valign="bottom"><b>m_third</b> {' '}</td></tr>
+<tr class="separator:a678a7795ab1008ebb1cd9af319e97312"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fb9f568253dfd2f8550e6bc1641b68a"><td class="memItemLeft" align="right" valign="top"><a id="a5fb9f568253dfd2f8550e6bc1641b68a"></a>
+char&#160;</td><td class="memItemRight" valign="bottom"><b>m_forth</b> {' '}</td></tr>
+<tr class="separator:a5fb9f568253dfd2f8550e6bc1641b68a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
 <tr class="memitem:ac1365d9143fa97d3b654c70194fce40a"><td class="memItemLeft" align="right" valign="top"><a id="ac1365d9143fa97d3b654c70194fce40a"></a>
@@ -136,6 +170,34 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operato
       </table>
 </div><div class="memdoc">
 <p>The constructor enables direct parsing from string to <a class="el" href="class_code.html" title="The class represents the code, which a ticket recieves when it&#39;s sold.">Code</a>. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ad4590146543d9559fa987540f9d54927"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4590146543d9559fa987540f9d54927">&#9670;&nbsp;</a></span>decypher_code()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Code::decypher_code </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>str_code</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Parses string to <a class="el" href="class_code.html" title="The class represents the code, which a ticket recieves when it&#39;s sold.">Code</a> </p>
 
 </div>
 </div>

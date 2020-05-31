@@ -65,6 +65,8 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="class_ticket_office-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -110,6 +112,26 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>check_code</b> (const
 <tr class="separator:a72210db9619c5501c833bc46fd31cd4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b0feda0f05a0592f6451f135cc09ee0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ticket_office.html#a9b0feda0f05a0592f6451f135cc09ee0">unload</a> ()</td></tr>
 <tr class="separator:a9b0feda0f05a0592f6451f135cc09ee0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a8675b349ca3b5136ca684059cb12f909"><td class="memItemLeft" align="right" valign="top"><a id="a8675b349ca3b5136ca684059cb12f909"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>get_worst_events_indexes</b> (std::vector&lt; size_t &gt; &amp;, const <a class="el" href="class_date.html">Date</a> &amp;, const <a class="el" href="class_date.html">Date</a> &amp;) const</td></tr>
+<tr class="separator:a8675b349ca3b5136ca684059cb12f909"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa81cbec40cc5a75653d9eb6091a1a01c"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ticket_office.html#aa81cbec40cc5a75653d9eb6091a1a01c">get_answer</a> (const std::string &amp;) const</td></tr>
+<tr class="separator:aa81cbec40cc5a75653d9eb6091a1a01c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a74522e8f95ac7a2695d7d29c513f0595"><td class="memItemLeft" align="right" valign="top"><a id="a74522e8f95ac7a2695d7d29c513f0595"></a>
+std::vector&lt; <a class="el" href="class_event.html">Event</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_events</b> {}</td></tr>
+<tr class="separator:a74522e8f95ac7a2695d7d29c513f0595"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b710dfdcc9f0ec7d85536da47520049"><td class="memItemLeft" align="right" valign="top"><a id="a6b710dfdcc9f0ec7d85536da47520049"></a>
+std::vector&lt; std::pair&lt; size_t, size_t &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_halls_sizes</b> {}</td></tr>
+<tr class="separator:a6b710dfdcc9f0ec7d85536da47520049"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c1d89916f0271169e3674e78845c439"><td class="memItemLeft" align="right" valign="top"><a id="a8c1d89916f0271169e3674e78845c439"></a>
+<a class="el" href="class_code_generator.html">CodeGenerator</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_gen</b> {}</td></tr>
+<tr class="separator:a8c1d89916f0271169e3674e78845c439"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -201,7 +223,7 @@ std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operato
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Invokes book_ticket method of <a class="el" href="class_event.html" title="Keeps all the needed information for an event.">Event</a> if there is an event with the same date and name. </p>
+<p>Invokes Event::book_ticket() if there is an event with the same date and name. </p>
 
 </div>
 </div>
@@ -242,7 +264,34 @@ std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operato
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Invokes buy_ticket method of <a class="el" href="class_event.html" title="Keeps all the needed information for an event.">Event</a> if there is an event with the same date and name. </p>
+<p>Invokes Event::buy_ticket() if there is an event with the same date and name. </p>
+
+</div>
+</div>
+<a id="aa81cbec40cc5a75653d9eb6091a1a01c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa81cbec40cc5a75653d9eb6091a1a01c">&#9670;&nbsp;</a></span>get_answer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char TicketOffice::get_answer </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>question</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets yes or no answer from the user to the given question. </p>
 
 </div>
 </div>
@@ -422,7 +471,7 @@ If</p><dl class="params"><dt>Parameters</dt><dd>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Invokes unbook_ticket method of <a class="el" href="class_event.html" title="Keeps all the needed information for an event.">Event</a> if there is an event with the same date and name. </p>
+<p>Invokes Event::unbook_ticket() if there is an event with the same date and name. </p>
 
 </div>
 </div>

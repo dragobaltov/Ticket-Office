@@ -161,9 +161,8 @@ void TicketOfficeEngine::help() const
 }
 
 /*! Generates name, date and hall number if the input was in the correct format 
- * and passes them to the add_event function of the TicketOffice class. 
- * Then prints a message if the operation was successful.
- */
+ * and passes them to TicketOffice::add_event(). 
+ * Then prints a message if the operation was successful.*/
 void TicketOfficeEngine::add_event(const std::string& input)
 {
 	std::vector<std::string> tokens{};
@@ -205,7 +204,7 @@ void TicketOfficeEngine::add_event(const std::string& input)
 	}
 }
 
-/*! Gets a note from the user and passes the data the book_ticket function of the TicketOffice class.
+/*! Gets a note from the user and passes the data to TicketOffice::book_ticket().
  * Finnaly, prints a message if the operation was successful.
 */
 void TicketOfficeEngine::book(size_t row, size_t seat, const Date& date, const std::string& event_name)
@@ -226,7 +225,7 @@ void TicketOfficeEngine::book(size_t row, size_t seat, const Date& date, const s
 	}
 }
 
-/*! Invokes unbook_ticket function of the TicketOffice class and prints a message if the operation was successful.*/
+/*! Invokes TicketOffice::unbook_ticket() prints a message if the operation was successful.*/
 void TicketOfficeEngine::unbook(size_t row, size_t seat, const Date & date, const std::string & event_name)
 {
 	bool is_successful = m_office.unbook_ticket(date, event_name, row, seat);
@@ -241,7 +240,7 @@ void TicketOfficeEngine::unbook(size_t row, size_t seat, const Date & date, cons
 	}
 }
 
-/*! Invokes buy_ticket function of the TicketOffice class and prints a message if the operation was successful.*/
+/*! Invokes TicketOffice::buy_ticket() and prints a message if the operation was successful.*/
 void TicketOfficeEngine::buy(size_t row, size_t seat, const Date & date, const std::string & event_name)
 {
 	bool is_successful = m_office.buy_ticket(date, event_name, row, seat);
@@ -257,7 +256,7 @@ void TicketOfficeEngine::buy(size_t row, size_t seat, const Date & date, const s
 }
 
 /*! Generates date and name from the input, if possible,
- * and passes them to the print_free_seats function of the TicketOffice class.*/
+ * and passes them to TicketOffice::print_free_seats().*/
 void TicketOfficeEngine::print_freeseats(const std::string& input) const
 {
 	std::vector<std::string> tokens{};
@@ -282,7 +281,7 @@ void TicketOfficeEngine::print_freeseats(const std::string& input) const
 	}
 }
 
-/*! Checks if date or name can be generated from the input and invokes print_bookings function of the TicketOffice class.*/
+/*! Checks if date or name can be generated from the input and invokes TicketOffice::print_bookings().*/
 void TicketOfficeEngine::print_bookings(const std::string& input) const
 {
 	if (input == "")
@@ -316,7 +315,7 @@ void TicketOfficeEngine::print_bookings(const std::string& input) const
 }
 
 /*! Checks if the given code is in the appropriate format. 
- * If yes, invokes the check_code function of the TicketOffice class.
+ * If yes, invokes TicketOffice::check_code().
  */
 void TicketOfficeEngine::check_code(const std::string& code_str) const
 {
@@ -341,7 +340,7 @@ void TicketOfficeEngine::check_code(const std::string& code_str) const
 }
 
 /*! Generates two dates and hall number from the input, if possible, 
- * and passes them to the report function of TicketOffice class.*/
+ * and passes them to TicketOffice::report().*/
 void TicketOfficeEngine::report(const std::string& input) const
 {
 	std::vector<std::string> tokens{};
@@ -372,13 +371,13 @@ void TicketOfficeEngine::report(const std::string& input) const
 	}
 }
 
-/*! Invokes print_most_watched_events function of the TicketOffice class.*/
+/*! Invokes TicketOffice::print_most_watched_events().*/
 void TicketOfficeEngine::print_best()
 {
 	m_office.print_most_watched_events();
 }
 
-/*! Generates two dates from the input, if possible, and passes them to worst_events function of the TicketOffice class.*/
+/*! Generates two dates from the input, if possible, and passes them to TicketOffice::worst_events().*/
 void TicketOfficeEngine::print_worst(const std::string& input)
 {
 	std::vector<std::string> tokens{};

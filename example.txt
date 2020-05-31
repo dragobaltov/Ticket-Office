@@ -46,6 +46,7 @@ open copy.txt
 book bilet
 best
 worst 2020-1-1 2020-12-23
+no
 exit
 
 
